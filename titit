@@ -66,8 +66,8 @@ _G.FishItConfig = _G.FishItConfig or {
             "Secret",
             {Name = "Ruby", Variant = "Gemstone"},
         },
-        ["Link Webhook"] = "ttps://discord.com/api/webhooks/1450015640487329793/wFqR24DvT3VCTMOTKuyO6j0KTan6LCdxTgQWct9C692sziO8kolyV5T5qnF_Beyuerjt",
-        ["Link Webhook Quest Complete"] = "ttps://discord.com/api/webhooks/1450015640487329793/wFqR24DvT3VCTMOTKuyO6j0KTan6LCdxTgQWct9C692sziO8kolyV5T5qnF_Beyuerjt",
+        ["Link Webhook"] = "https://discord.com/api/webhooks/1450015640487329793/wFqR24DvT3VCTMOTKuyO6j0KTan6LCdxTgQWct9C692sziO8kolyV5T5qnF_Beyuerjt",
+        ["Link Webhook Quest Complete"] = "https://discord.com/api/webhooks/1450015640487329793/wFqR24DvT3VCTMOTKuyO6j0KTan6LCdxTgQWct9C692sziO8kolyV5T5qnF_Beyuerjt",
     },
     ["Weather"] = {
         ["Auto Buying"] = true,
