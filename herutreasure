@@ -15,7 +15,7 @@ _G.FishItConfig = _G.FishItConfig or {
     },
     ["Auto Trade"] = {
         ["Enabled"] = true,
-        ["Whitelist Username"] = {"aaxstoremitos8","aaxstoresecret10","aaxstoremitos12"},
+        ["Whitelist Username"] = {"aaxstoremitos8","aaxstoresecret10","aaxstoremitos12","aaxstoremitos10","aaxstorebatu12","aaxstoresecret16","aaxstoremitos16","aaxstoresecret17","aaxstoremitos17"},
         ["Category Fish"] = {
             "Secret",
         },
@@ -134,7 +134,7 @@ _G.FishItConfig = _G.FishItConfig or {
             ["Fisherman Island"] = {"Starter Rod"},
             ["Kohana Volcano"] = {"Grass Rod", "Midnight Rod"},
             ["Tropical Grove"] = {"Astral Rod"},
-            ["Treasure Room"] = {"Element Rod"},
+			["Treasure Room"] = {"Element Rod", "Ghostfinn Rod"},
         },
         ["Endgame"] = "",
     },
