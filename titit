@@ -63,7 +63,7 @@ _G.FishItConfig = _G.FishItConfig or {
         ["Minimum Rod"] = "Astral Rod",
     },
     ["WebHook"] = {
-        ["Auto Sending"] = false,
+        ["Auto Sending"] = true,
         ["Category"] = {
             "Secret",
             {Name = "Ruby", Variant = "Gemstone"},
