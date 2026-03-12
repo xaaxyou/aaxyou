@@ -40,7 +40,7 @@ _G.FishItConfig = _G.FishItConfig or {
         ["Auto Element Rod"] = false,
         ["Auto Element Rod 2"] = true,
         ["Auto Diamond Rod"] = false,
-        ["Unlock Ancient Ruin"] = true,
+        ["Unlock Ancient Ruin"] = false,
         ["Allowed Sacrifice"] = {
             "Giant Squid",
             "Cryoshade Glider",
@@ -98,8 +98,8 @@ _G.FishItConfig = _G.FishItConfig or {
         },
     },
     ["Enchant"] = {
-        ["Auto Enchant"] = false,
-        ["Roll Enchant"] = false,
+        ["Auto Enchant"] = true,
+        ["Roll Enchant"] = true,
         ["Evolved Roll Enchant"] = false,
         ["Enchant List"] = {
             "SECRET Hunter",
