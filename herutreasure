@@ -15,7 +15,7 @@ _G.FishItConfig = _G.FishItConfig or {
     },
     ["Auto Trade"] = {
         ["Enabled"] = true,
-        ["Whitelist Username"] = {"aaxstoremitos8","aaxstoresecret10","aaxstoremitos12","aaxstoremitos10","aaxstorebatu12","aaxstoresecret16","aaxstoremitos16","aaxstoresecret17","aaxstoremitos17","aaxstoresecret15","aaxstoremitos15"},
+        ["Whitelist Username"] = {"aaxstoremitos8","aaxstoresecret10","aaxstoremitos12","aaxstoremitos10","aaxstorebatu12","aaxstoresecret16","aaxstoremitos16","aaxstoresecret17","aaxstoremitos17","aaxstoresecret15","aaxstoremitos15","Zer0z0idex652","Soraiceax221","Yukimast3r0x950","Warpdark766","Zenmasteraz530","Ori0ngl0w526","Flintslice440","S1gurdfrost504","Wr4thbright778","Braypaladin499","R1xmageen292","Riftguard427","Yuriultr4390","Boltbyte392","Zeronox591","Crixshred966","Trevthunderet902","Zelvstorm294","Dantebyteax376","B4ronmyrk499"},
         ["Category Fish"] = {
             "Secret",
         },
