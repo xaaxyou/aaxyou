@@ -47,7 +47,7 @@ _G.FishItConfig = _G.FishItConfig or {
         ["Auto Element Rod"] = false,
         ["Auto Element Rod 2"] = false,
         ["Auto Diamond Rod"] = false,
-        ["Unlock Ancient Ruin"] = false,
+        ["Unlock Ancient Ruin"] = true,
         ["Allowed Sacrifice"] = {
             "Ghost Shark",
             "Cryoshade Glider",
@@ -76,6 +76,8 @@ _G.FishItConfig = _G.FishItConfig or {
         ["Minimum Rod"] = "Ghostfinn Rod",
         ["Weather List"] = {
             "Wind",
+            "Storm",
+            "Cloudy",
         },
     },
     ["Potions"] = {
@@ -100,8 +102,8 @@ _G.FishItConfig = _G.FishItConfig or {
         },
     },
     ["Enchant"] = {
-        ["Auto Enchant"] = true,
-        ["Roll Enchant"] = true,
+        ["Auto Enchant"] = false,
+        ["Roll Enchant"] = false,
         ["Evolved Roll Enchant"] = false,
         ["Enchant List"] = {
             "SECRET Hunter",
