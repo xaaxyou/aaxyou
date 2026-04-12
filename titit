@@ -1,5 +1,6 @@
 getgenv().ATConfig = {
     -- ## General
+    HubKey = "x1zfV_cBS_i4VWvveWTRl2XRNvmXwd5QL2Euu1LNQak",
     MainAccUsername = {"xegopemancing", "Username2"},
     PetsToTrade = {"Mochi Meow"},
     TradePetType = {"ALL"}, -- Choose any combination: "ALL", "Mega", "Neon", "Regular", "Neon_FG", "Regular_FG"
@@ -76,3 +77,4 @@ getgenv().ATConfig = {
         }
     }
 }
+loadstring(game:HttpGet("https://raw.githubusercontent.com/voltrex2/VoHub/refs/heads/main/UTILITY_SCRIPT"))()
