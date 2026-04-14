@@ -1,0 +1,52 @@
+setfpscap(2)
+getgenv().VO_CONFIG = {
+    -- === HUB / AUTH ===
+    HubKey = "ajbwmLGI0v-hUvkFqcliHgfJ9oBdjiLOEiJWgTfLLpc",
+    DeviceName = "",
+
+    -- === MAIN FARM (choose one mode) ===
+    PotFarm = false,
+    EggFarm = false,
+    KeepEggFarm = false,
+    EggName = {"Egg Name"},  -- Priority order: first egg tried, then second, etc.
+    PrioritizePet = "2D Kitty",
+
+    -- === EVENT FARM ===
+    AutoBuyCandyChisel = false,
+    AutoBuyMochiMallet = true,
+
+    -- === PET PEN ===
+    PetPen = false,
+    CustomPenEggs = {"Egg Name"},
+    CustomPenPets = {},
+    PrioritizePetPenTypes = {},  -- "Egg", "Normal", "Neon" (empty = all)
+
+    -- === PET RELEASER ===
+    PetReleaser = false,
+    ReleasePets = {},       -- Whitelist: names to release (empty = all)
+    ExcludeReleasePets = {}, -- Blacklist: names to never release (overrides ReleasePets)
+    ReleaseTypes = {},      -- "Mega", "Neon", "Normal" (empty = all)
+
+    -- === AGE PETS ===
+    AgePets = false,
+    AgePetsNames = {},
+    AgePetsTypes = {"Normal"},  -- "Normal", "Neon", "ALL"
+
+    -- === AUTO FUSE ===
+    AutoFuse = true,
+
+    -- === BUY PETS ===
+    BuyPets = false,
+    BuyPetName = "Pet Name",
+
+    -- === LURE / BAIT ===
+    BaitName = "Bait Name",
+
+    -- === DISCORD WEBHOOK ===
+    WebhookEnabled = false,
+    WebhookURL = "",
+    WebhookPets = {},  -- Pet names to send (empty = all)
+
+    ExtraOpti = false  -- Experimental; may cause issues
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/voltrex2/VoHub/refs/heads/main/FARM"))()
