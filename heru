@@ -36,8 +36,8 @@ getgenv().VO_CONFIG = {
     AutoFuse = true,
 
     -- === BUY PETS ===
-    BuyPets = false,
-    BuyPetName = "Pet Name",
+    BuyPets = true,
+    BuyPetName = "Mochi Meow",
 
     -- === LURE / BAIT ===
     BaitName = "Bait Name",
