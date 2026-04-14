@@ -38,8 +38,8 @@ getgenv().VO_CONFIG = {
     AutoFuse = false,
 
     -- === BUY PETS ===
-    BuyPets = false,
-    BuyPetName = {"Pet Name", "Pet Name 2"},  -- Loops in order, buys all of first pet then moves to next
+    BuyPets = true,
+    BuyPetName = {"Mochi Meow"},  -- Loops in order, buys all of first pet then moves to next
 
     -- === BOXES ===
     BuyBoxes = false,
