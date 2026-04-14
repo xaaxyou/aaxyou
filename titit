@@ -13,7 +13,7 @@ getgenv().VO_CONFIG = {
 
     -- === EVENT FARM ===
     AutoBuyCandyChisel = false,
-    AutoBuyMochiMallet = false,
+    AutoBuyMochiMallet = true,
 
     -- === PET PEN ===
     PetPen = false,
