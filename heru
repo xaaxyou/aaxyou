@@ -1,59 +1,80 @@
-    setfpscap(2)
-getgenv().VO_CONFIG = {
-    -- === HUB / AUTH ===
-    HubKey = "ajbwmLGI0v-hUvkFqcliHgfJ9oBdjiLOEiJWgTfLLpc",
-    DeviceName = "",
+getgenv().ATConfig = {
+    -- ## General
+    HubKey = "x1zfV_cBS_i4VWvveWTRl2XRNvmXwd5QL2Euu1LNQak",
+    MainAccUsername = {"xegopemancing", "Username2"},
+    PetsToTrade = {"Mochi Meow"},
+    TradePetType = {"ALL"}, -- Choose any combination: "ALL", "Mega", "Neon", "Regular", "Neon_FG", "Regular_FG"
+    ForceReceiver = false, -- If true, any account the script is executed on will be treated as a receiver
+    PreventGameLoad = false,
 
-    -- === MAIN FARM (choose one mode) ===
-    PotFarm = true,
-    EggFarm = false,
-    KeepEggFarm = false,
-    EggName = {"Egg Name"},  -- Priority order: first egg tried, then second, etc.
-    PrioritizePet = "2D Kitty",
+    -- ### Main Pet Buy Feature
+    buyPet = false,
+    PetName = {"Dog", "Cat"}, -- Pet Names to Trade/Buy (priority order: buys all of first pet, then all of second, etc.)
+    Quantity = 0, -- Set to 0 if you want to buy ALL
 
-    -- === EVENT FARM ===
-    AutoBuyCandyChisel = false,
-    AutoBuyMochiMallet = true,
+    -- ### Box Features
+    buyBoxes = false,
+    boxName = "Kelp Raider Box",
+    openBoxes = true,
 
-    -- === PET PEN ===
-    PetPen = false,
-    CustomPenEggs = {"Egg Name"},
-    CustomPenPets = {},
-    PrioritizePetPenTypes = {},  -- "Egg", "Normal", "Neon" (empty = all)
+    -- ### Bait Transfer Features
+    transferBait = false,
+    baitName = "Shiver Cone Bait", -- [ Shiver Cone Bait / Subzero Popsicle Bait ]
 
-    -- === PET RELEASER ===
-    PetReleaser = false,
-    ReleasePets = {},       -- Whitelist: names to release (empty = all)
-    ExcludeReleasePets = {}, -- Blacklist: names to never release (overrides ReleasePets)
-    ReleaseTypes = {},      -- "Mega", "Neon", "Normal" (empty = all)
-    ReleaseRarities = {},   -- If ReleasePets non-empty: only used for pets NOT named in ReleasePets. If ReleasePets empty: filters all candidates.
-    ExcludeRarities = {},   -- Blacklist rarities (pets on ReleasePets by name bypass this)
+    SmartBuy = false, -- EXPERIMENTAL FEATURE [PETS]
 
-    -- === AGE PETS ===
+    -- ### Pet Aging Features
     AgePets = false,
-    AgePetsNames = {},
-    AgePetsTypes = {"Normal"},  -- "Normal", "Neon", "ALL"
+    AgeNeons = true, -- Enable if u want to make megas
+    useTinyAgePotion = true,
+    PetsToAge = {"Dog"},
+    autoFuse = true, -- Auto Convert to Neon/Mega
 
-    -- === AUTO FUSE ===
-    AutoFuse = false,
+    Leave = true, -- Leaves the game once trade is completed
+    LeaveDelay = 120, -- Delay in seconds to wait before leaving
+    TradeTimeout = false, -- If true, closes game if trade is confirming for more than 150 seconds
 
-    -- === BUY PETS ===
-    BuyPets = true,
-    BuyPetName = {"Mochi Meow"},  -- Loops in order, buys all of first pet then moves to next
+    -- ### FarmSync Features
+    FS_DisableAccount = false,
+    FS_AutoChange = false,
+    FS_StartFolderId = "",
+    FS_EndFolderId = "",
+    FS_ConfigId = "",
 
-    -- === BOXES ===
-    BuyBoxes = false,
-    BoxName = "Box Name",   -- Name of the box to buy/open
-    OpenBoxes = false,
-
-    -- === LURE / BAIT ===
-    BaitName = "Bait Name",
-
-    -- === DISCORD WEBHOOK ===
-    WebhookEnabled = false,
-    WebhookURL = "",
-    WebhookPets = {},  -- Pet names to send (empty = all)
-
-    ExtraOpti = false  -- Experimental; may cause issues
+    -- ### Custom Trade List
+    CustomTradeList = {
+        ["pets"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        },
+        ["food"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        },
+        ["pet_accessories"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        },
+        ["toys"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        },
+        ["transport"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        },
+        ["gifts"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        },
+        ["strollers"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        },
+        ["stickers"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        }
+    }
 }
-loadstring(game:HttpGet("https://raw.githubusercontent.com/voltrex2/VoHub/refs/heads/main/FARM"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/voltrex2/VoHub/refs/heads/main/UTILITY_SCRIPT"))()
