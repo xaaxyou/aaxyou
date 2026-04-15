@@ -1,12 +1,12 @@
 getgenv().ATConfig = {
     -- ## General
     HubKey = "x1zfV_cBS_i4VWvveWTRl2XRNvmXwd5QL2Euu1LNQak",
-    MainAccUsername = {"BLITZKNOx07rblxskye", "BlitzqUINN20"},
+    MainAccUsername = {"BLITZKNOx07rblxskye", "Username2"},
     PetsToTrade = {"Mochi Meow"},
     TradePetType = {"ALL"}, -- Choose any combination: "ALL", "Mega", "Neon", "Regular", "Neon_FG", "Regular_FG"
     ForceReceiver = false, -- If true, any account the script is executed on will be treated as a receiver
     PreventGameLoad = false,
-
+    
     -- ### Main Pet Buy Feature
     buyPet = false,
     PetName = {"Dog", "Cat"}, -- Pet Names to Trade/Buy (priority order: buys all of first pet, then all of second, etc.)
