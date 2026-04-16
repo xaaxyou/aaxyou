@@ -1,7 +1,7 @@
 getgenv().ATConfig = {
     -- ## General
     HubKey = "x1zfV_cBS_i4VWvveWTRl2XRNvmXwd5QL2Euu1LNQak",
-    MainAccUsername = {"xegopemancing", "BlitzqUINN20", "LunaPhoenixXO", "BLITZKNOx07rblxskye"},
+    MainAccUsername = {"xegopemancing", "BlitzqUINN20", "LunaPhoenixXO", "BLITZKNOx07rblxskye", "Turb07oFoxblox", "LILAc12ebunny10", "aridrEW199", "LilHazelStreams21", "lAyLabrooKS4", "HAPpYpuppYhq", "IvyWest7", "MrSkylaarSkye26", "MiaCrew86", "off1cialavaryderpro9", "carterzayne3", "Blitz4LifePlays6", "TheAr1aZayne20", "Kingston57pIGEONFam", "RAVensquad1420", "AxelEEverly0761425", "MiaZoneDev", "YoAsherEverly29nova", "Willow16KinsleyStrea", "officialMiloMaddox", "Lun42CoolCrew", "SunnyRemy18", "RileyWolf273", "B4byShadowCruz26tv", "Sage44LifeGuppy", "ultraAvaRiverBBlox", "averywalker26playz10"},
     PetsToTrade = {"Mochi Meow"},
     TradePetType = {"ALL"}, -- Choose any combination: "ALL", "Mega", "Neon", "Regular", "Neon_FG", "Regular_FG"
     ForceReceiver = false, -- If true, any account the script is executed on will be treated as a receiver
