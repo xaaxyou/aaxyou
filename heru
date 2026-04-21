@@ -15,7 +15,7 @@ getgenv().VO_CONFIG = {
     PetPen = true,
     CustomPenEggs = {"Cracked Egg"},
     CustomPenPets = {},
-    PrioritizePetPenTypes = {Egg},  -- "Egg", "Normal", "Neon" (empty = all)
+    PrioritizePetPenTypes = {"Egg"},  -- "Egg", "Normal", "Neon" (empty = all)
 
     -- === PET RELEASER ===
     PetReleaser = false,
