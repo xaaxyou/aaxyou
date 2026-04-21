@@ -6,7 +6,7 @@ getgenv().VO_CONFIG = {
 
     -- === MAIN FARM (choose one mode) ===
     PotFarm = false,
-    EggFarm = ture,
+    EggFarm = true,
     KeepEggFarm = true, -- If true, will keep trying to hatch eggs even when no bucks
     EggName = {"Cracked Egg"},  -- Priority order: first egg tried, then second, etc.
     PrioritizePet = "2D Kitty",
