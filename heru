@@ -1,24 +1,23 @@
-    setfpscap(2)
 getgenv().VO_CONFIG = {
     -- === HUB / AUTH ===
-    HubKey = "ajbwmLGI0v-hUvkFqcliHgfJ9oBdjiLOEiJWgTfLLpc",
+    HubKey = "",
     DeviceName = "",
 
     -- === MAIN FARM (choose one mode) ===
-    PotFarm = false,
+    PotFarm = true,
     EggFarm = true,
     KeepEggFarm = true, -- If true, will keep trying to hatch eggs even when no bucks
     EggName = {"Cracked Egg"},  -- Priority order: first egg tried, then second, etc.
     PrioritizePet = "2D Kitty",
 
     -- === PET PEN ===
-    PetPen = true,
-    CustomPenEggs = {"Cracked Egg"},
+    PetPen = false,
+    CustomPenEggs = {"Egg Name"},
     CustomPenPets = {},
-    PrioritizePetPenTypes = {"Egg"},  -- "Egg", "Normal", "Neon" (empty = all)
+    PrioritizePetPenTypes = {},  -- "Egg", "Normal", "Neon" (empty = all)
 
     -- === PET RELEASER ===
-    PetReleaser = false,
+    PetReleaser = true,
     ReleasePets = {},       -- Whitelist: names to release (empty = all)
     ExcludeReleasePets = {}, -- Blacklist: base names or prefixed like ReleasePets ("Neon Dog", "Normal Cat", "Mega FG X")
     ReleaseTypes = {},      -- "Mega", "Neon", "Normal" (empty = all)
@@ -34,8 +33,8 @@ getgenv().VO_CONFIG = {
     AutoFuse = false,
 
     -- === BUY PETS ===
-    BuyPets = false,
-    BuyPetName = {"Pet Name", "Pet Name 2"},  -- Loops in order, buys all of first pet then moves to next
+    BuyPets = true,
+    BuyPetName = {"Crystal Egg", "Cracked Egg"},  -- Loops in order, buys all of first pet then moves to next
 
     -- === BOXES ===
     BuyBoxes = false,
