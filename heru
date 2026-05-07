@@ -1,6 +1,7 @@
+    setfpscap(2)
 getgenv().VO_CONFIG = {
     -- === HUB / AUTH ===
-    HubKey = "",
+    HubKey = "ajbwmLGI0v-hUvkFqcliHgfJ9oBdjiLOEiJWgTfLLpc",
     DeviceName = "",
 
     -- === MAIN FARM (choose one mode) ===
