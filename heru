@@ -1,13 +1,12 @@
-    setfpscap(2)
 getgenv().VO_CONFIG = {
     -- === HUB / AUTH ===
     HubKey = "ajbwmLGI0v-hUvkFqcliHgfJ9oBdjiLOEiJWgTfLLpc",
     DeviceName = "",
 
     -- === MAIN FARM (choose one mode) ===
-    PotFarm = true,
+    PotFarm = false,
     EggFarm = true,
-    KeepEggFarm = true, -- If true, will keep trying to hatch eggs even when no bucks
+    KeepEggFarm = false, -- If true, will keep trying to hatch eggs even when no bucks
     EggName = {"Cracked Egg"},  -- Priority order: first egg tried, then second, etc.
     PrioritizePet = "2D Kitty",
 
@@ -20,9 +19,9 @@ getgenv().VO_CONFIG = {
     -- === PET RELEASER ===
     PetReleaser = true,
     ReleasePets = {},       -- Whitelist: names to release (empty = all)
-    ExcludeReleasePets = {}, -- Blacklist: base names or prefixed like ReleasePets ("Neon Dog", "Normal Cat", "Mega FG X")
+    ExcludeReleasePets = {"Cat", "Dog", "Jiggly Jerboa"}, -- Blacklist: base names or prefixed like ReleasePets ("Neon Dog", "Normal Cat", "Mega FG X")
     ReleaseTypes = {},      -- "Mega", "Neon", "Normal" (empty = all)
-    ReleaseRarities = {},   -- If ReleasePets non-empty: only used for pets NOT named in ReleasePets. If ReleasePets empty: filters all candidates.
+    ReleaseRarities = {"Common", "Uncommon", "Rare", "Ultra Rare"},   -- If ReleasePets non-empty: only used for pets NOT named in ReleasePets. If ReleasePets empty: filters all candidates.
     ExcludeRarities = {},   -- Blacklist rarities (pets on ReleasePets by name bypass this)
 
     -- === AGE PETS ===
@@ -35,7 +34,7 @@ getgenv().VO_CONFIG = {
 
     -- === BUY PETS ===
     BuyPets = true,
-    BuyPetName = {"Crystal Egg", "Cracked Egg"},  -- Loops in order, buys all of first pet then moves to next
+    BuyPetName = {"Crystal Egg", "Cracked Egg"},   -- Loops in order, buys all of first pet then moves to next
 
     -- === BOXES ===
     BuyBoxes = false,
@@ -51,10 +50,10 @@ getgenv().VO_CONFIG = {
     WebhookPets = {},  -- Pet names to send (empty = all)
 
     -- === AUTO TRADE (sender → receiver accounts) ===
-    AutoTrade = false,
-    ReceiverUsernames = {},
+    AutoTrade = true,
+    ReceiverUsernames = {"xegopemancing", "Satria48697"},
     TradeItemList = {
-         pets = {"Dog","Neon Cat"}
+         pets = {"Crystal Egg", "Alicorn", "Ancient Dragon", "Dragonfly"},  -- Pet names to trade (empty = all, still gated by TradePetType)
     }, -- Per category: { pets = {"Dog","Neon Cat"}, food = {}, toys = {}, ... } — use "ALL" in a category to allow that whole category (pets still gated by TradePetType for bare names)
     TradePetType = {"ALL"},       -- Only applies to pets: "ALL", "Mega", "Neon", "Regular", "Neon_FG", "Regular_FG" — not used for food/toys/etc.; inline prefixes on pet strings (e.g. "Mega Dog") bypass this
 
