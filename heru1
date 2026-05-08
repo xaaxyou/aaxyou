@@ -8,7 +8,7 @@ getgenv().VO_CONFIG = {
     PotFarm = false,
     EggFarm = true,
     KeepEggFarm = false, -- If true, will keep trying to hatch eggs even when no bucks
-    EggName = {"Egg Name"},  -- Priority order: first egg tried, then second, etc.
+    EggName = {"Cracked Egg"},  -- Priority order: first egg tried, then second, etc.
     PrioritizePet = "2D Kitty",
 
     -- === PET PEN ===
