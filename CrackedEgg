@@ -1,62 +1,80 @@
-getgenv().VO_CONFIG = {
-    -- === HUB / AUTH ===
+getgenv().ATConfig = {
+    -- ## General
     HubKey = "x1zfV_cBS_i4VWvveWTRl2XRNvmXwd5QL2Euu1LNQak",
-    DeviceName = "",
+    MainAccUsername = {"Xz_ChaseDRStrikerPRT", "SkyUPWraitho", "XZ_DawnNcRune7cPixel", "WraithlACircuitd1207","XzSparklyp8Vantar8Pi","Turboz9DeltaT"},
+    PetsToTrade = {"Mochi Meow", "Crystal Egg", "Alicorn", "Ancient Dragon", "Dragonfly", "Admin Abuse Egg", "Blue Whale", "Dango Penguins", "Dragonfruit Fox", "Emberlight", "Sea Turtle", "Silverback Gorilla", "Velocirooster"}, -- Pet names to trade (empty = all, still gated by TradePetType)
+    TradePetType = {"ALL"}, -- Choose any combination: "ALL", "Mega", "Neon", "Regular", "Neon_FG", "Regular_FG"
+    ForceReceiver = false, -- If true, any account the script is executed on will be treated as a receiver
+    PreventGameLoad = false,
+    
+    -- ### Main Pet Buy Feature
+    buyPet = false,
+    PetName = {"Dog", "Cat"}, -- Pet Names to Trade/Buy (priority order: buys all of first pet, then all of second, etc.)
+    Quantity = 0, -- Set to 0 if you want to buy ALL
 
-    -- === MAIN FARM (choose one mode) ===
-    PotFarm = false,
-    EggFarm = true,
-    KeepEggFarm = false, -- If true, will keep trying to hatch eggs even when no bucks
-    EggName = {"Cracked Egg"},  -- Priority order: first egg tried, then second, etc.
-    PrioritizePet = "2D Kitty",
+    -- ### Box Features
+    buyBoxes = false,
+    boxName = "Kelp Raider Box",
+    openBoxes = true,
 
-    -- === PET PEN ===
-    PetPen = false,
-    CustomPenEggs = {"Egg Name"},
-    CustomPenPets = {},
-    PrioritizePetPenTypes = {},  -- "Egg", "Normal", "Neon" (empty = all)
+    -- ### Bait Transfer Features
+    transferBait = false,
+    baitName = "Shiver Cone Bait", -- [ Shiver Cone Bait / Subzero Popsicle Bait ]
 
-    -- === PET RELEASER ===
-    PetReleaser = true,
-    ReleasePets = {},       -- Whitelist: names to release (empty = all)
-    ExcludeReleasePets = {"Cat", "Dog", "Jiggly Jerboa"}, -- Blacklist: base names or prefixed like ReleasePets ("Neon Dog", "Normal Cat", "Mega FG X")
-    ReleaseTypes = {},      -- "Mega", "Neon", "Normal" (empty = all)
-    ReleaseRarities = {"Common", "Uncommon", "Rare", "Ultra Rare"},   -- If ReleasePets non-empty: only used for pets NOT named in ReleasePets. If ReleasePets empty: filters all candidates.
-    ExcludeRarities = {},   -- Blacklist rarities (pets on ReleasePets by name bypass this)
+    SmartBuy = false, -- EXPERIMENTAL FEATURE [PETS]
 
-    -- === AGE PETS ===
+    -- ### Pet Aging Features
     AgePets = false,
-    AgePetsNames = {},
-    AgePetsTypes = {"Normal"},  -- "Normal", "Neon", "ALL"
+    AgeNeons = true, -- Enable if u want to make megas
+    useTinyAgePotion = true,
+    PetsToAge = {"Dog"},
+    autoFuse = true, -- Auto Convert to Neon/Mega
 
-    -- === AUTO FUSE ===
-    AutoFuse = false,
+    Leave = true, -- Leaves the game once trade is completed
+    LeaveDelay = 120, -- Delay in seconds to wait before leaving
+    TradeTimeout = false, -- If true, closes game if trade is confirming for more than 150 seconds
 
-    -- === BUY PETS ===
-    BuyPets = true,
-    BuyPetName = {"Crystal Egg", "Cracked Egg"},   -- Loops in order, buys all of first pet then moves to next
+    -- ### FarmSync Features
+    FS_DisableAccount = false,
+    FS_AutoChange = false,
+    FS_StartFolderId = "",
+    FS_EndFolderId = "",
+    FS_ConfigId = "",
 
-    -- === BOXES ===
-    BuyBoxes = false,
-    BoxName = "Box Name",   -- Name of the box to buy/open
-    OpenBoxes = false,
-
-    -- === LURE / BAIT ===
-    BaitName = "Bait Name",
-
-    -- === DISCORD WEBHOOK ===
-    WebhookEnabled = false,
-    WebhookURL = "",
-    WebhookPets = {},  -- Pet names to send (empty = all)
-
-    -- === AUTO TRADE (sender → receiver accounts) ===
-    AutoTrade = true,
-    ReceiverUsernames = {xegopemancing},
-    TradeItemList = {
-         pets = {"Crystal Egg", "Alicorn", "Ancient Dragon", "Dragonfly"},  -- Pet names to trade (empty = all, still gated by TradePetType)
-    }, -- Per category: { pets = {"Dog","Neon Cat"}, food = {}, toys = {}, ... } — use "ALL" in a category to allow that whole category (pets still gated by TradePetType for bare names)
-    TradePetType = {"ALL"},       -- Only applies to pets: "ALL", "Mega", "Neon", "Regular", "Neon_FG", "Regular_FG" — not used for food/toys/etc.; inline prefixes on pet strings (e.g. "Mega Dog") bypass this
-
-    ExtraOpti = false  -- Experimental; may cause issues
+    -- ### Custom Trade List
+    CustomTradeList = {
+        ["pets"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        },
+        ["food"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        },
+        ["pet_accessories"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        },
+        ["toys"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        },
+        ["transport"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        },
+        ["gifts"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        },
+        ["strollers"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        },
+        ["stickers"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        }
+    }
 }
-loadstring(game:HttpGet("https://raw.githubusercontent.com/voltrex2/VoHub/refs/heads/main/FARM"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/voltrex2/VoHub/refs/heads/main/UTILITY_SCRIPT"))()
