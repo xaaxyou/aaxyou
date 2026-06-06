@@ -1,6 +1,6 @@
 getgenv().ATConfig = {
     -- ## General
-    HubKey = "",
+    HubKey = "x1zfV_cBS_i4VWvveWTRl2XRNvmXwd5QL2Euu1LNQak",
     MainAccUsername = {"Ghost8aBlockR169033", "MysticENZ3roW25"},
     PetsToTrade = {"Glyptodon Ducky", "Unicorn Ducky", "Strawberry Shortcake Ducky", "Alicorn", "Ancient Dragon", "Crystal Egg", "Admin Abuse Egg", "Sushi Penguin", "Dragonfly", "Purrowl", "Nurse Shark"},
     TradePetType = {"ALL"}, -- Choose any combination: "ALL", "Mega", "Neon", "Regular", "Neon_FG", "Regular_FG"
