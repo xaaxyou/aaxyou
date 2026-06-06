@@ -1,8 +1,8 @@
 getgenv().ATConfig = {
     -- ## General
-    HubKey = "x1zfV_cBS_i4VWvveWTRl2XRNvmXwd5QL2Euu1LNQak",
-    MainAccUsername = {"Kayden80YoHazelWalke", "cHl955OePhOeNiX", "HazelGuppy", "CaptainJaxonBuildstv", "MINIHAMZTERsquad21", "KingstonBroooks25blo", "AceBloxCreeewkitten", "UltraKai365Walk3r"},
-    PetsToTrade = {"Mochi Meow", "Crystal Egg", "Alicorn", "Ancient Dragon", "Dragonfly", "Admin Abuse Egg", "Blue Whale", "Dango Penguins", "Dragonfruit Fox", "Emberlight", "Sea Turtle", "Silverback Gorilla", "Velocirooster"}, -- Pet names to trade (empty = all, still gated by TradePetType)
+    HubKey = "",
+    MainAccUsername = {"Ghost8aBlockR169033", "Username2"},
+    PetsToTrade = {"Glyptodon Ducky", "Unicorn Ducky", "Strawberry Shortcake Ducky", "Alicorn", "Ancient Dragon", "Crystal Egg", "Admin Abuse Egg", "Sushi Penguin", "Dragonfly", "Purrowl", "Nurse Shark"},
     TradePetType = {"ALL"}, -- Choose any combination: "ALL", "Mega", "Neon", "Regular", "Neon_FG", "Regular_FG"
     ForceReceiver = false, -- If true, any account the script is executed on will be treated as a receiver
     PreventGameLoad = false,
@@ -21,7 +21,7 @@ getgenv().ATConfig = {
     transferBait = false,
     baitName = "Shiver Cone Bait", -- [ Shiver Cone Bait / Subzero Popsicle Bait ]
 
-    SmartBuy = false, -- EXPERIMENTAL FEATURE [PETS]
+    SmartBuy = false,
 
     -- ### Pet Aging Features
     AgePets = false,
@@ -30,16 +30,26 @@ getgenv().ATConfig = {
     PetsToAge = {"Dog"},
     autoFuse = true, -- Auto Convert to Neon/Mega
 
-    Leave = true, -- Leaves the game once trade is completed
-    LeaveDelay = 120, -- Delay in seconds to wait before leaving
     TradeTimeout = false, -- If true, closes game if trade is confirming for more than 150 seconds
 
-    -- ### FarmSync Features
-    FS_DisableAccount = false,
-    FS_AutoChange = false,
-    FS_StartFolderId = "",
-    FS_EndFolderId = "",
-    FS_ConfigId = "",
+    -- ### Account Features
+    AccountFeatures = {
+        ["LeaveServer"] = false, -- Leave server when transfer is completed
+        ["LeaveDelay"] = 120, -- Delay in seconds to wait before leaving
+
+        ["Selected Tool"] = "FarmSync", -- "FarmSync" or "FarmersV5"
+        ["FarmSync"] = {
+            DisableAccount = false,
+            AutoChange = false,
+            StartFolderId = "",
+            EndFolderId = "",
+            ConfigId = ""
+        },
+        ["FarmersV5"] = {
+            DisableAccount = false,
+            APIKey = "",
+        }
+    },
 
     -- ### Custom Trade List
     CustomTradeList = {
