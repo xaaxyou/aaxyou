@@ -4,11 +4,14 @@ getgenv().VO_CONFIG = {
     DeviceName = "",
 
     -- === MAIN FARM (choose one mode) ===
-    PotFarm = false,
-    EggFarm = true,
+    PotFarm = true,
+    EggFarm = false,
     KeepEggFarm = false, -- If true, will keep trying to hatch eggs even when no bucks
-    EggName = {"Cracked Egg"},  -- Priority order: first egg tried, then second, etc.
+    EggName = {"Egg Name"},  -- Priority order: first egg tried, then second, etc.
     PrioritizePet = "2D Kitty",
+
+    -- === JOURNEY / TRUCK EVENT ===
+    AutoBuyTruckPet = true,  -- Buy current truck pet with event currency after repairs
 
     -- === PET PEN ===
     PetPen = false,
@@ -18,28 +21,28 @@ getgenv().VO_CONFIG = {
 
     -- === PET RELEASER ===
     PetReleaser = true,
-    ReleasePets = {},       -- Whitelist: names to release (empty = all)
-    ExcludeReleasePets = {"Cat", "Dog", "Jiggly Jerboa"}, -- Blacklist: base names or prefixed like ReleasePets ("Neon Dog", "Normal Cat", "Mega FG X")
-    ReleaseTypes = {},      -- "Mega", "Neon", "Normal" (empty = all)
-    ReleaseRarities = {"Common", "Uncommon", "Rare", "Ultra Rare"},   -- If ReleasePets non-empty: only used for pets NOT named in ReleasePets. If ReleasePets empty: filters all candidates.
+    ReleasePets = {"Rubber Ducky"},       -- Whitelist: names to release (empty = all)
+    ExcludeReleasePets = {}, -- Blacklist: base names or prefixed like ReleasePets ("Neon Dog", "Normal Cat", "Mega FG X")
+    ReleaseTypes = {"Normal"},      -- "Mega", "Neon", "Normal" (empty = all)
+    ReleaseRarities = {},   -- If ReleasePets non-empty: only used for pets NOT named in ReleasePets. If ReleasePets empty: filters all candidates.
     ExcludeRarities = {},   -- Blacklist rarities (pets on ReleasePets by name bypass this)
 
     -- === AGE PETS ===
-    AgePets = false,
-    AgePetsNames = {},
-    AgePetsTypes = {"Normal"},  -- "Normal", "Neon", "ALL"
+    AgePets = true,
+    AgePetsNames = {"Nurse Shark", "Unicorn Ducky", "Glyptodon Ducky"},
+    AgePetsTypes = {"ALL"},  -- "Normal", "Neon", "ALL"
 
     -- === AUTO FUSE ===
-    AutoFuse = false,
+    AutoFuse = true,
 
     -- === BUY PETS ===
     BuyPets = true,
-    BuyPetName = {"Crystal Egg", "Cracked Egg"},   -- Loops in order, buys all of first pet then moves to next
+    BuyPetName = {"Crystal Egg"},  -- Loops in order, buys all of first pet then moves to next
 
     -- === BOXES ===
-    BuyBoxes = false,
-    BoxName = "Box Name",   -- Name of the box to buy/open
-    OpenBoxes = false,
+    BuyBoxes = true,
+    BoxName = "Rubber Ducky Box",   -- Name of the box to buy/open
+    OpenBoxes = true,
 
     -- === LURE / BAIT ===
     BaitName = "Bait Name",
@@ -50,10 +53,10 @@ getgenv().VO_CONFIG = {
     WebhookPets = {},  -- Pet names to send (empty = all)
 
     -- === AUTO TRADE (sender → receiver accounts) ===
-    AutoTrade = true,
-    ReceiverUsernames = {"xegopemancing", "Satria48697"},
+    AutoTrade = false,
+    ReceiverUsernames = {},
     TradeItemList = {
-         pets = {"Crystal Egg", "Alicorn", "Ancient Dragon", "Dragonfly", "Admin Abuse Egg"},  -- Pet names to trade (empty = all, still gated by TradePetType)
+         pets = {"Dog","Neon Cat"}
     }, -- Per category: { pets = {"Dog","Neon Cat"}, food = {}, toys = {}, ... } — use "ALL" in a category to allow that whole category (pets still gated by TradePetType for bare names)
     TradePetType = {"ALL"},       -- Only applies to pets: "ALL", "Mega", "Neon", "Regular", "Neon_FG", "Regular_FG" — not used for food/toys/etc.; inline prefixes on pet strings (e.g. "Mega Dog") bypass this
 
