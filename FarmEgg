@@ -8,13 +8,13 @@ getgenv().ATConfig = {
     PreventGameLoad = false,
     
     -- ### Main Pet Buy Feature
-    buyPet = false,
-    PetName = {"Dog", "Cat"}, -- Pet Names to Trade/Buy (priority order: buys all of first pet, then all of second, etc.)
+    buyPet = true,
+    PetName = {"Nurse Shark"}, -- Pet Names to Trade/Buy (priority order: buys all of first pet, then all of second, etc.)
     Quantity = 0, -- Set to 0 if you want to buy ALL
 
     -- ### Box Features
-    buyBoxes = false,
-    boxName = "Kelp Raider Box",
+    buyBoxes = true,
+    boxName = "Rubber Ducky Box",
     openBoxes = true,
 
     -- ### Bait Transfer Features
@@ -27,7 +27,7 @@ getgenv().ATConfig = {
     AgePets = true,
     AgeNeons = true, -- Enable if u want to make megas
     useTinyAgePotion = true,
-    PetsToAge = {"Nurse Shark"},
+    PetsToAge = {"Nurse Shark", "Unicorn Ducky"},
     autoFuse = true, -- Auto Convert to Neon/Mega
 
     TradeTimeout = false, -- If true, closes game if trade is confirming for more than 150 seconds
