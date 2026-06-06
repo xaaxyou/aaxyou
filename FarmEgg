@@ -1,90 +1,65 @@
-getgenv().ATConfig = {
-    -- ## General
+getgenv().VO_CONFIG = {
+    -- === HUB / AUTH ===
     HubKey = "x1zfV_cBS_i4VWvveWTRl2XRNvmXwd5QL2Euu1LNQak",
-    MainAccUsername = {"Ghost8aBlockR169033", "MysticENZ3roW25"},
-    PetsToTrade = {"Admin Abuse Egg", "Crystal Egg", "Purrowl", "Strawberry Shortcake Ducky", "Sushi Penguin", "Unicorn Ducky", "Glyptodon Ducky", "Nurse Shark"},
-    TradePetType = {"ALL"}, -- Choose any combination: "ALL", "Mega", "Neon", "Regular", "Neon_FG", "Regular_FG"
-    ForceReceiver = false, -- If true, any account the script is executed on will be treated as a receiver
-    PreventGameLoad = false,
-    
-    -- ### Main Pet Buy Feature
-    buyPet = true,
-    PetName = {"Nurse Shark"}, -- Pet Names to Trade/Buy (priority order: buys all of first pet, then all of second, etc.)
-    Quantity = 0, -- Set to 0 if you want to buy ALL
+    DeviceName = "",
 
-    -- ### Box Features
-    buyBoxes = true,
-    boxName = "Rubber Ducky Box",
-    openBoxes = true,
+    -- === MAIN FARM (choose one mode) ===
+    PotFarm = true,
+    EggFarm = false,
+    KeepEggFarm = false, -- If true, will keep trying to hatch eggs even when no bucks
+    EggName = {"Egg Name"},  -- Priority order: first egg tried, then second, etc.
+    PrioritizePet = "2D Kitty",
 
-    -- ### Bait Transfer Features
-    transferBait = false,
-    baitName = "Shiver Cone Bait", -- [ Shiver Cone Bait / Subzero Popsicle Bait ]
+    -- === JOURNEY / TRUCK EVENT ===
+    AutoBuyTruckPet = true,  -- Buy current truck pet with event currency after repairs
 
-    SmartBuy = false,
+    -- === PET PEN ===
+    PetPen = false,
+    CustomPenEggs = {"Egg Name"},
+    CustomPenPets = {},
+    PrioritizePetPenTypes = {},  -- "Egg", "Normal", "Neon" (empty = all)
 
-    -- ### Pet Aging Features
+    -- === PET RELEASER ===
+    PetReleaser = true,
+    ReleasePets = {"Rubber Ducky"},       -- Whitelist: names to release (empty = all)
+    ExcludeReleasePets = {}, -- Blacklist: base names or prefixed like ReleasePets ("Neon Dog", "Normal Cat", "Mega FG X")
+    ReleaseTypes = {"Normal"},      -- "Mega", "Neon", "Normal" (empty = all)
+    ReleaseRarities = {},   -- If ReleasePets non-empty: only used for pets NOT named in ReleasePets. If ReleasePets empty: filters all candidates.
+    ExcludeRarities = {},   -- Blacklist rarities (pets on ReleasePets by name bypass this)
+
+    -- === AGE PETS ===
     AgePets = true,
-    AgeNeons = true, -- Enable if u want to make megas
-    useTinyAgePotion = true,
-    PetsToAge = {"Nurse Shark", "Unicorn Ducky"},
-    autoFuse = true, -- Auto Convert to Neon/Mega
+    AgePetsNames = {"Nurse Shark", "Unicorn Ducky"},
+    AgePetsTypes = {"ALL"},  -- "Normal", "Neon", "ALL"
 
-    TradeTimeout = false, -- If true, closes game if trade is confirming for more than 150 seconds
+    -- === AUTO FUSE ===
+    AutoFuse = true,
 
-    -- ### Account Features
-    AccountFeatures = {
-        ["LeaveServer"] = false, -- Leave server when transfer is completed
-        ["LeaveDelay"] = 120, -- Delay in seconds to wait before leaving
+    -- === BUY PETS ===
+    BuyPets = true,
+    BuyPetName = {"Crystal Egg"},  -- Loops in order, buys all of first pet then moves to next
 
-        ["Selected Tool"] = "FarmSync", -- "FarmSync" or "FarmersV5"
-        ["FarmSync"] = {
-            DisableAccount = false,
-            AutoChange = false,
-            StartFolderId = "",
-            EndFolderId = "",
-            ConfigId = ""
-        },
-        ["FarmersV5"] = {
-            DisableAccount = false,
-            APIKey = "",
-        }
-    },
+    -- === BOXES ===
+    BuyBoxes = true,
+    BoxName = "Rubber Ducky Box",   -- Name of the box to buy/open
+    OpenBoxes = true,
 
-    -- ### Custom Trade List
-    CustomTradeList = {
-        ["pets"] = {
-            ["Trade"] = {},
-            ["Ignore"] = {}
-        },
-        ["food"] = {
-            ["Trade"] = {},
-            ["Ignore"] = {}
-        },
-        ["pet_accessories"] = {
-            ["Trade"] = {},
-            ["Ignore"] = {}
-        },
-        ["toys"] = {
-            ["Trade"] = {},
-            ["Ignore"] = {}
-        },
-        ["transport"] = {
-            ["Trade"] = {},
-            ["Ignore"] = {}
-        },
-        ["gifts"] = {
-            ["Trade"] = {},
-            ["Ignore"] = {}
-        },
-        ["strollers"] = {
-            ["Trade"] = {},
-            ["Ignore"] = {}
-        },
-        ["stickers"] = {
-            ["Trade"] = {},
-            ["Ignore"] = {}
-        }
-    }
+    -- === LURE / BAIT ===
+    BaitName = "Bait Name",
+
+    -- === DISCORD WEBHOOK ===
+    WebhookEnabled = false,
+    WebhookURL = "",
+    WebhookPets = {},  -- Pet names to send (empty = all)
+
+    -- === AUTO TRADE (sender → receiver accounts) ===
+    AutoTrade = false,
+    ReceiverUsernames = {},
+    TradeItemList = {
+         pets = {"Dog","Neon Cat"}
+    }, -- Per category: { pets = {"Dog","Neon Cat"}, food = {}, toys = {}, ... } — use "ALL" in a category to allow that whole category (pets still gated by TradePetType for bare names)
+    TradePetType = {"ALL"},       -- Only applies to pets: "ALL", "Mega", "Neon", "Regular", "Neon_FG", "Regular_FG" — not used for food/toys/etc.; inline prefixes on pet strings (e.g. "Mega Dog") bypass this
+
+    ExtraOpti = false  -- Experimental; may cause issues
 }
-loadstring(game:HttpGet("https://raw.githubusercontent.com/voltrex2/VoHub/refs/heads/main/UTILITY_SCRIPT"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/voltrex2/VoHub/refs/heads/main/FARM"))()
