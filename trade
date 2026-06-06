@@ -1,7 +1,7 @@
 getgenv().ATConfig = {
     -- ## General
     HubKey = "",
-    MainAccUsername = {"Ghost8aBlockR169033", "Username2"},
+    MainAccUsername = {"Ghost8aBlockR169033", "MysticENZ3roW25"},
     PetsToTrade = {"Glyptodon Ducky", "Unicorn Ducky", "Strawberry Shortcake Ducky", "Alicorn", "Ancient Dragon", "Crystal Egg", "Admin Abuse Egg", "Sushi Penguin", "Dragonfly", "Purrowl", "Nurse Shark"},
     TradePetType = {"ALL"}, -- Choose any combination: "ALL", "Mega", "Neon", "Regular", "Neon_FG", "Regular_FG"
     ForceReceiver = false, -- If true, any account the script is executed on will be treated as a receiver
