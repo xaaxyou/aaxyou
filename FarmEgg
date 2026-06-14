@@ -4,13 +4,16 @@ getgenv().VO_CONFIG = {
     DeviceName = "",
 
     -- === MAIN FARM (choose one mode) ===
-    PotFarm = true,
+    PotFarm = false,
     EggFarm = false,
+    PetFarm = true, -- Third mode: farm pets from PetFarmList in order (natural task-aging)
     KeepEggFarm = false, -- If true, will keep trying to hatch eggs even when no bucks
+    KeepPetFarm = true, -- If true, will switch back when PetFarmList targets appear
     EggName = {"Egg Name"},  -- Priority order: first egg tried, then second, etc.
+    PetFarmList = {"Sheepdog Ducky", "Nurse Shark", "Pilot Gull", "Unicorn Ducky", "Purrowl"}, -- Ordered pet names: age all non-FG of first name, then second, etc.; fallback if none available
     PrioritizePet = "2D Kitty",
 
-    -- === JOURNEY / TRUCK EVENT ===
+    -- === EVENT ===
     AutoBuyTruckPet = true,  -- Buy current truck pet with event currency after repairs
 
     -- === PET PEN ===
@@ -44,15 +47,10 @@ getgenv().VO_CONFIG = {
     BoxName = "Rubber Ducky Box",   -- Name of the box to buy/open
     OpenBoxes = true,
 
-    -- === LURE / BAIT ===
+    -- === LURE ===
     BaitName = "Bait Name",
 
-    -- === DISCORD WEBHOOK ===
-    WebhookEnabled = false,
-    WebhookURL = "",
-    WebhookPets = {},  -- Pet names to send (empty = all)
-
-    -- === AUTO TRADE (sender → receiver accounts) ===
+    -- === AUTO TRADE ===
     AutoTrade = false,
     ReceiverUsernames = {},
     TradeItemList = {
@@ -60,6 +58,16 @@ getgenv().VO_CONFIG = {
     }, -- Per category: { pets = {"Dog","Neon Cat"}, food = {}, toys = {}, ... } — use "ALL" in a category to allow that whole category (pets still gated by TradePetType for bare names)
     TradePetType = {"ALL"},       -- Only applies to pets: "ALL", "Mega", "Neon", "Regular", "Neon_FG", "Regular_FG" — not used for food/toys/etc.; inline prefixes on pet strings (e.g. "Mega Dog") bypass this
 
-    ExtraOpti = false  -- Experimental; may cause issues
+    -- === CASH TRANSFER ===
+    CashTransfer = false,
+    TransferMethods = {"mannequin"},  -- Current Methods: "mannequin"
+    TransferAccount = "",
+
+    -- === DISCORD WEBHOOK ===
+    WebhookEnabled = false,
+    WebhookURL = "",
+    WebhookPets = {},  -- Pet names to send (empty = all)
+
+    ExtraOpti = false
 }
 loadstring(game:HttpGet("https://raw.githubusercontent.com/voltrex2/VoHub/refs/heads/main/FARM"))()
