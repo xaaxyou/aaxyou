@@ -1,0 +1,90 @@
+getgenv().ATConfig = {
+    -- ## General
+    HubKey = "x1zfV_cBS_i4VWvveWTRl2XRNvmXwd5QL2Euu1LNQak",
+    MainAccUsername = {"Ghost8aBlockR169033", "MysticENZ3roW25", "FallenzSSnarefSEcho1", "OrbitOhSt0rmye198918", "UltraQBVoidt40", "Lun42CoolCrew", "M3chaz5Snip3ra1310", "WraithlACircuitd1207", "Ghostc9Primalk"},
+    PetsToTrade = {"Strawberry Shortcake Ducky", "Crystal Egg", "Admin Abuse Egg", "Sushi Penguin"},
+    TradePetType = {"Mega", "Neon_FG"}, -- Choose any combination: "ALL", "Mega", "Neon", "Regular", "Neon_FG", "Regular_FG"
+    ForceReceiver = false, -- If true, any account the script is executed on will be treated as a receiver
+    PreventGameLoad = false,
+    
+    -- ### Main Pet Buy Feature
+    buyPet = false,
+    PetName = {"Dog", "Cat"}, -- Pet Names to Trade/Buy (priority order: buys all of first pet, then all of second, etc.)
+    Quantity = 0, -- Set to 0 if you want to buy ALL
+
+    -- ### Box Features
+    buyBoxes = false,
+    boxName = "Kelp Raider Box",
+    openBoxes = true,
+
+    -- ### Bait Transfer Features
+    transferBait = false,
+    baitName = "Shiver Cone Bait", -- [ Shiver Cone Bait / Subzero Popsicle Bait ]
+
+    SmartBuy = false,
+
+    -- ### Pet Aging Features
+    AgePets = false,
+    AgeNeons = true, -- Enable if u want to make megas
+    useTinyAgePotion = true,
+    PetsToAge = {"Dog"},
+    autoFuse = true, -- Auto Convert to Neon/Mega
+
+    TradeTimeout = false, -- If true, closes game if trade is confirming for more than 150 seconds
+
+    -- ### Account Features
+    AccountFeatures = {
+        ["LeaveServer"] = false, -- Leave server when transfer is completed
+        ["LeaveDelay"] = 120, -- Delay in seconds to wait before leaving
+
+        ["Selected Tool"] = "FarmSync", -- "FarmSync" or "FarmersV5"
+        ["FarmSync"] = {
+            DisableAccount = false,
+            AutoChange = false,
+            StartFolderId = "",
+            EndFolderId = "",
+            ConfigId = ""
+        },
+        ["FarmersV5"] = {
+            DisableAccount = false,
+            APIKey = "",
+        }
+    },
+
+    -- ### Custom Trade List
+    CustomTradeList = {
+        ["pets"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        },
+        ["food"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        },
+        ["pet_accessories"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        },
+        ["toys"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        },
+        ["transport"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        },
+        ["gifts"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        },
+        ["strollers"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        },
+        ["stickers"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        }
+    }
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/voltrex2/VoHub/refs/heads/main/UTILITY_SCRIPT"))()
