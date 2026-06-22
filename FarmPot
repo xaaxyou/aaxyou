@@ -14,7 +14,8 @@ getgenv().VO_CONFIG = {
     PrioritizePet = "2D Kitty",
 
     -- === EVENT ===
-    AutoBuyTruckPet = true,  -- Buy current truck pet with event currency after repairs
+    AutoFish = true,
+    PrioritizeCraft = "Tealwood Monster Bait",  -- "Rainbow Trout" | "Tealwood Monster Bait
 
     -- === PET PEN ===
     PetPen = false,
