@@ -27,7 +27,7 @@ getgenv().ATConfig = {
     AgePets = true,
     AgeNeons = true, -- Enable if u want to make megas
     useTinyAgePotion = true,
-    PetsToAge = {"Tealwood Monster"},
+    PetsToAge = {"Tealwood Monster", "Stygian Owl"},
     autoFuse = true, -- Auto Convert to Neon/Mega
 
     TradeTimeout = false, -- If true, closes game if trade is confirming for more than 150 seconds
