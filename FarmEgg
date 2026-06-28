@@ -53,7 +53,7 @@ getgenv().VO_CONFIG = {
 
     -- === AUTO TRADE ===
     AutoTrade = false,
-    ReceiverUsernames = {},
+    ReceiverUsernames = {"HunterGoPixelr110616", "XzQueenppChasepzX124", "FallenzSSnarefSEcho1", "OrbitOhSt0rmye198918", "UltraQBVoidt40", "Lun42CoolCrew", "M3chaz5Snip3ra1310", "WraithlACircuitd1207", "Ghostc9Primalk", "T0xicggLi0n5103036", "WolfpTLionP117763", "PixelH3Miraget3Fox14", "LavaURByteF1545", "R0cketnIScythe155", "F0x1RFlickqRGalaxy13", "XZ_Core61MechaA1Blad", "DustiMArrowW1852", "Turb061Ech0z134316", "JellyT9Maxf47", "R0ck3tOWMirag3R12155", "MysticENZ3roW25"},
     TradeItemList = {
          pets = {"Dog","Neon Cat"}
     }, -- Per category: { pets = {"Dog","Neon Cat"}, food = {}, toys = {}, ... } — use "ALL" in a category to allow that whole category (pets still gated by TradePetType for bare names)
