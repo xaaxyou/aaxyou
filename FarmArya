@@ -1,0 +1,74 @@
+getgenv().VO_CONFIG = {
+    -- === HUB / AUTH ===
+    HubKey = "x1zfV_cBS_i4VWvveWTRl2XRNvmXwd5QL2Euu1LNQak",
+    DeviceName = "ARYA",
+
+    -- === MAIN FARM (choose one mode) ===
+    PotFarm = true,
+    EggFarm = false,
+    PetFarm = false, -- Third mode: farm pets from PetFarmList in order (natural task-aging)
+    KeepEggFarm = false, -- If true, will keep trying to hatch eggs even when no bucks
+    KeepPetFarm = false, -- If true, will switch back when PetFarmList targets appear
+    EggName = {"Egg Name"},  -- Priority order: first egg tried, then second, etc.
+    PetFarmList = {"Nurse Shark", "Sheepdog Ducky", "Unicorn Ducky", "Purrowl"}, -- Ordered pet names: age all non-FG of first name, then second, etc.; fallback if none available
+    PrioritizePet = "2D Kitty",
+
+    -- === EVENT ===
+    AutoFish = true,
+    PrioritizeCraft = "Tealwood Monster Bait",  -- "Rainbow Trout" | "Tealwood Monster Bait
+
+    -- === PET PEN ===
+    PetPen = false,
+    CustomPenEggs = {"Egg Name"},
+    CustomPenPets = {},
+    PrioritizePetPenTypes = {},  -- "Egg", "Normal", "Neon" (empty = all)
+
+    -- === PET RELEASER ===
+    PetReleaser = true,
+    ReleasePets = {"Rubber Ducky"},       -- Whitelist: names to release (empty = all)
+    ExcludeReleasePets = {}, -- Blacklist: base names or prefixed like ReleasePets ("Neon Dog", "Normal Cat", "Mega FG X")
+    ReleaseTypes = {"Normal"},      -- "Mega", "Neon", "Normal" (empty = all)
+    ReleaseRarities = {},   -- If ReleasePets non-empty: only used for pets NOT named in ReleasePets. If ReleasePets empty: filters all candidates.
+    ExcludeRarities = {},   -- Blacklist rarities (pets on ReleasePets by name bypass this)
+
+    -- === AGE PETS ===
+    AgePets = true,
+    AgePetsNames = {"Nurse Shark", "Sheepdog Ducky", "Unicorn Ducky", "Purrowl", "Pilot Gull", "Tealwood Monster"},
+    AgePetsTypes = {"ALL"},  -- "Normal", "Neon", "ALL"
+
+    -- === AUTO FUSE ===
+    AutoFuse = true,
+
+    -- === BUY PETS ===
+    BuyPets = true,
+    BuyPetName = {"Crystal Egg"},  -- Loops in order, buys all of first pet then moves to next
+
+    -- === BOXES ===
+    BuyBoxes = true,
+    BoxName = "Rubber Ducky Box",   -- Name of the box to buy/open
+    OpenBoxes = true,
+
+    -- === LURE ===
+    BaitName = "Bait Name",
+
+    -- === AUTO TRADE ===
+    AutoTrade = false,
+    ReceiverUsernames = {"HunterGoPixelr110616", "XzQueenppChasepzX124", "FallenzSSnarefSEcho1", "OrbitOhSt0rmye198918", "UltraQBVoidt40", "Lun42CoolCrew", "M3chaz5Snip3ra1310", "WraithlACircuitd1207", "Ghostc9Primalk", "T0xicggLi0n5103036", "WolfpTLionP117763", "PixelH3Miraget3Fox14", "LavaURByteF1545", "R0cketnIScythe155", "F0x1RFlickqRGalaxy13", "XZ_Core61MechaA1Blad", "DustiMArrowW1852", "Turb061Ech0z134316", "JellyT9Maxf47", "R0ck3tOWMirag3R12155", "MysticENZ3roW25"},
+    TradeItemList = {
+         pets = {"Dog","Neon Cat"}
+    }, -- Per category: { pets = {"Dog","Neon Cat"}, food = {}, toys = {}, ... } — use "ALL" in a category to allow that whole category (pets still gated by TradePetType for bare names)
+    TradePetType = {"ALL"},       -- Only applies to pets: "ALL", "Mega", "Neon", "Regular", "Neon_FG", "Regular_FG" — not used for food/toys/etc.; inline prefixes on pet strings (e.g. "Mega Dog") bypass this
+
+    -- === CASH TRANSFER ===
+    CashTransfer = false,
+    TransferMethods = {"mannequin"},  -- Current Methods: "mannequin"
+    TransferAccount = "",
+
+    -- === DISCORD WEBHOOK ===
+    WebhookEnabled = false,
+    WebhookURL = "",
+    WebhookPets = {},  -- Pet names to send (empty = all)
+
+    ExtraOpti = false
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/voltrex2/VoHub/refs/heads/main/FARM"))()
