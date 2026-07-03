@@ -14,7 +14,7 @@ getgenv().VO_CONFIG = {
     PrioritizePet = "2D Kitty",
 
     -- === EVENT ===
-    AutoFish = true,
+    AutoFish = false,
     PrioritizeCraft = "Tealwood Monster Bait",  -- "Rainbow Trout" | "Tealwood Monster Bait
 
     -- === PET PEN ===
@@ -45,7 +45,7 @@ getgenv().VO_CONFIG = {
 
     -- === BOXES ===
     BuyBoxes = true,
-    BoxName = "Rubber Ducky Box",   -- Name of the box to buy/open
+    BoxName = "Oakee Box",   -- Name of the box to buy/open
     OpenBoxes = true,
 
     -- === LURE ===
