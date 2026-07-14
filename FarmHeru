@@ -4,13 +4,13 @@ getgenv().VO_CONFIG = {
     DeviceName = "HERU",
 
     -- === MAIN FARM (choose one mode) ===
-    PotFarm = true,
+    PotFarm = false,
     EggFarm = false,
-    PetFarm = false, -- Third mode: farm pets from PetFarmList in order (natural task-aging)
+    PetFarm = true, -- Third mode: farm pets from PetFarmList in order (natural task-aging)
     KeepEggFarm = false, -- If true, will keep trying to hatch eggs even when no bucks
-    KeepPetFarm = false, -- If true, will switch back when PetFarmList targets appear
+    KeepPetFarm = true, -- If true, will switch back when PetFarmList targets appear
     EggName = {"Egg Name"},  -- Priority order: first egg tried, then second, etc.
-    PetFarmList = {"Nurse Shark", "Sheepdog Ducky", "Unicorn Ducky", "Purrowl"}, -- Ordered pet names: age all non-FG of first name, then second, etc.; fallback if none available
+    PetFarmList = {"River Otter", "Oakee Wizard", "Purrowl"}, -- Ordered pet names: age all non-FG of first name, then second, etc.; fallback if none available
     PrioritizePet = "2D Kitty",
 
     -- === EVENT ===
@@ -37,7 +37,7 @@ getgenv().VO_CONFIG = {
 
     -- === AGE PETS ===
     AgePets = true,
-    AgePetsNames = {"Oakee Wizard", "Unicorn Ducky", "Purrowl", "Pilot Gull", "Tealwood Monster"},
+    AgePetsNames = {"Oakee Wizard", "Purrowl", "River Otter", "Tealwood Monster"},
     AgePetsTypes = {"ALL"},  -- "Normal", "Neon", "ALL"
 
     -- === AUTO FUSE ===
@@ -45,10 +45,10 @@ getgenv().VO_CONFIG = {
 
     -- === BUY PETS ===
     BuyPets = true,
-    BuyPetName = {"Crystal Egg"},  -- Loops in order, buys all of first pet then moves to next
+    BuyPetName = {"River Otter"},  -- Loops in order, buys all of first pet then moves to next
 
     -- === BOXES ===
-    BuyBoxes = true,
+    BuyBoxes = false,
     BoxName = "Oakee Box",   -- Name of the box to buy/open
     OpenBoxes = true,
 
