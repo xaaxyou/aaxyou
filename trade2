@@ -1,8 +1,8 @@
 getgenv().ATConfig = {
     -- ## General
     HubKey = "x1zfV_cBS_i4VWvveWTRl2XRNvmXwd5QL2Euu1LNQak",
-    MainAccUsername = {"Rumble4MPr0m179820", "R0cketnIScythe155", "F0x1RFlickqRGalaxy13", "XZ_Core61MechaA1Blad", "JellyT9Maxf47", "R0ck3tOWMirag3R12155", "HunterGoPixelr110616", "XzQueenppChasepzX124", "Shr3dCcHollowb152493", "XzPixelatedQ6Silverv", "Nor4Nas26h29", "CocoObby43", "Nova4LifeHamzter15", "BuilderLucasBuildeer", "Caleb777JustRocky4Li"},
-    PetsToTrade = {"Unicorn Ducky", "Strawberry Shortcake Ducky", "Alicorn", "Ancient Dragon", "Crystal Egg", "Admin Abuse Egg", "Sushi Penguin", "Dragonfly", "Neon FG Purrowl", "Nurse Shark", "Pilot Gull", "Sheepdog Ducky", "Tealwood Monster", "Neon FG Stygian Owl", "Neon FG Oakee Wizard", "Mega Oakee Wizard", "Mega Stygian Owl"},
+    MainAccUsername = {"Rumble4MPr0m179820", "R0cketnIScythe155", "F0x1RFlickqRGalaxy13", "XZ_Core61MechaA1Blad", "JellyT9Maxf47", "R0ck3tOWMirag3R12155", "HunterGoPixelr110616", "XzQueenppChasepzX124", "Shr3dCcHollowb152493", "XzPixelatedQ6Silverv", "Nor4Nas26h29", "CocoObby43", "Nova4LifeHamzter15", "BuilderLucasBuildeer", "Caleb777JustRocky4Li", "DustiMArrowW1852"},
+    PetsToTrade = {"Unicorn Ducky", "Strawberry Shortcake Ducky", "Alicorn", "Ancient Dragon", "Crystal Egg", "Admin Abuse Egg", "Sushi Penguin", "Dragonfly", "Neon FG Purrowl", "Nurse Shark", "Pilot Gull", "Sheepdog Ducky", "Tealwood Monster", "Neon FG Stygian Owl", "Neon FG Oakee Wizard", "Mega Oakee Wizard", "Mega Stygian Owl", "Neon FG River Otter", "Mega River Otter"},
     TradePetType = {"ALL"}, -- Choose any combination: "ALL", "Mega", "Neon", "Regular", "Neon_FG", "Regular_FG"
     ForceReceiver = false, -- If true, any account the script is executed on will be treated as a receiver
     PreventGameLoad = false,
@@ -27,7 +27,7 @@ getgenv().ATConfig = {
     AgePets = true,
     AgeNeons = true, -- Enable if u want to make megas
     useTinyAgePotion = true,
-    PetsToAge = {"Tealwood Monster", "Purrowl", "Oakee Wizard"},
+    PetsToAge = {"Tealwood Monster", "Purrowl", "Oakee Wizard", "River Otter"},
     autoFuse = true, -- Auto Convert to Neon/Mega
 
     TradeTimeout = false, -- If true, closes game if trade is confirming for more than 150 seconds
