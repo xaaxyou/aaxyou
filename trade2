@@ -15,7 +15,7 @@ getgenv().ATConfig = {
     -- ### Box Features
     buyBoxes = true,
     boxName = "Oakee Box",
-    openBoxes = true,
+    openBoxes = false,
 
     -- ### Bait Transfer Features
     transferBait = false,
