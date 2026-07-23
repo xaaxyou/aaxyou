@@ -34,7 +34,7 @@ getgenv().ATConfig = {
 
     -- ### Account Features
     AccountFeatures = {
-        ["LeaveServer"] = false, -- Leave server when transfer is completed
+        ["LeaveServer"] = true, -- Leave server when transfer is completed
         ["LeaveDelay"] = 60, -- Delay in seconds to wait before leaving
 
         ["Selected Tool"] = "FarmSync", -- "FarmSync" or "FarmersV5"
