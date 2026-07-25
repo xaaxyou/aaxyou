@@ -29,7 +29,7 @@ getgenv().VO_CONFIG = {
 
     -- === PET RELEASER ===
     PetReleaser = true,
-    ReleasePets = {"Rubber Ducky", "Oakee Knight", "Oakee"},       -- Whitelist: names to release (empty = all)
+    ReleasePets = {"Rubber Ducky", "Oakee Knight", "Oakee", "Glyptodon Ducky"},       -- Whitelist: names to release (empty = all)
     ExcludeReleasePets = {}, -- Blacklist: base names or prefixed like ReleasePets ("Neon Dog", "Normal Cat", "Mega FG X")
     ReleaseTypes = {"Normal"},      -- "Mega", "Neon", "Normal" (empty = all)
     ReleaseRarities = {},   -- If ReleasePets non-empty: only used for pets NOT named in ReleasePets. If ReleasePets empty: filters all candidates.
@@ -44,7 +44,7 @@ getgenv().VO_CONFIG = {
     AutoFuse = true,
 
     -- === BUY PETS ===
-    BuyPets = false,
+    BuyPets = true,
     BuyPetName = {"Crystal Egg"},  -- Loops in order, buys all of first pet then moves to next
 
     -- === BOXES ===
