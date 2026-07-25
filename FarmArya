@@ -4,7 +4,7 @@ getgenv().VO_CONFIG = {
     DeviceName = "ARYA",
 
     -- === MAIN FARM (choose one mode) ===
-    PotFarm = true,
+    PotFarm = false,
     EggFarm = false,
     PetFarm = false, -- Third mode: farm pets from PetFarmList in order (natural task-aging)
     KeepEggFarm = false, -- If true, will keep trying to hatch eggs even when no bucks
@@ -29,7 +29,7 @@ getgenv().VO_CONFIG = {
 
     -- === PET RELEASER ===
     PetReleaser = true,
-    ReleasePets = {"Rubber Ducky"},       -- Whitelist: names to release (empty = all)
+    ReleasePets = {"Rubber Ducky", "Oakee Knight", "Oakee"},       -- Whitelist: names to release (empty = all)
     ExcludeReleasePets = {}, -- Blacklist: base names or prefixed like ReleasePets ("Neon Dog", "Normal Cat", "Mega FG X")
     ReleaseTypes = {"Normal"},      -- "Mega", "Neon", "Normal" (empty = all)
     ReleaseRarities = {},   -- If ReleasePets non-empty: only used for pets NOT named in ReleasePets. If ReleasePets empty: filters all candidates.
@@ -45,7 +45,7 @@ getgenv().VO_CONFIG = {
 
     -- === BUY PETS ===
     BuyPets = false,
-    BuyPetName = {"River Otter"},  -- Loops in order, buys all of first pet then moves to next
+    BuyPetName = {"Crystal Egg"},  -- Loops in order, buys all of first pet then moves to next
 
     -- === BOXES ===
     BuyBoxes = true,
