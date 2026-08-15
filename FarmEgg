@@ -4,71 +4,104 @@ getgenv().VO_CONFIG = {
     DeviceName = "RF",
 
     -- === MAIN FARM (choose one mode) ===
-    PotFarm = false,
-    EggFarm = true,
-    PetFarm = true, -- Third mode: farm pets from PetFarmList in order (natural task-aging)
-    KeepEggFarm = false, -- If true, will keep trying to hatch eggs even when no bucks
-    KeepPetFarm = false, -- If true, will switch back when PetFarmList targets appear
-    EggName = {"Craked Egg", "Crystal Egg"},  -- Priority order: first egg tried, then second, etc.
-    PetFarmList = {"Alicorn", "Ancient Dragon", "Blue Whale", "Sea Turtle"}, -- Ordered pet names: age all non-FG of first name, then second, etc.; fallback if none available
+    PotFarm = true,
+    EggFarm = false,
+    PetFarm = true,
+    KeepEggFarm = false,
+    KeepPetFarm = true,
+    EggName = {"Egg Name"},
+    PetFarmList = {"Oakee"},
     PrioritizePet = "2D Kitty",
 
-    -- === EVENT ===
-    AutoBeeGame = true,       -- Bees Wagon 2026: hand in bouquets, plant/buy seeds, claim pass
-
     -- === PET PEN ===
-    PetPen = false,
-    CustomPenEggs = {"Egg Name"},
-    CustomPenPets = {},
-    PrioritizePetPenTypes = {},  -- "Egg", "Normal", "Neon" (empty = all)
+    PetPen = true,
+    CustomPenEggs = {"Endangered Egg", "Pet Egg", "Cracked Egg", "Starter Egg"},
+    CustomPenPets = {
+        "Abyssinian Cat", "Badger", "Black Rhino",
+        "Black-Footed Ferret", "Blue Whale", "Corgi",
+        "Ginger Cat","Grinmoire", "Mexican Wolf",
+        "Oakee Knight", "Ocelot", "Orangutan", "Orca",
+        "Pangolin", "Parakeet", "Pomeranian", "Ribbon Seal",
+        "River Otter", "Robot", "Sea Turtle", "Starfish", "Storm Condor", "Swordfish", "Toucan", "Zebra", "Oakee"
+    },
+    PrioritizePetPenTypes = {"Egg"},
 
     -- === PET RELEASER ===
     PetReleaser = true,
-    ReleasePets = {"Ant", "Mouse", "Camel", "Donkey", "Poodle", "Orangutan", "Parakeet", "Zebra", "Robot", "Swordfish", "Black Rhino"},       -- Whitelist: names to release (empty = all)
-    ExcludeReleasePets = {}, -- Blacklist: base names or prefixed like ReleasePets ("Neon Dog", "Normal Cat", "Mega FG X")
-    ReleaseTypes = {"Normal"},      -- "Mega", "Neon", "Normal" (empty = all)
-    ReleaseRarities = {},   -- If ReleasePets non-empty: only used for pets NOT named in ReleasePets. If ReleasePets empty: filters all candidates.
-    ExcludeRarities = {},   -- Blacklist rarities (pets on ReleasePets by name bypass this)
+    ReleasePets = {},
+    ExcludeReleasePets = {
+        "Frostbite Bear",
+        "Dragonfruit Fox",
+        "Dango Penguins",
+        "Silverback Gorilla",
+        "Sushi Penguin",
+        "Velocirooster",
+        "2D Kitty",
+        "Rainbow Trout",
+        "Tealwood Monster",
+        "Oakee Wizard", 
+        "General Sheepdog"
+    },
+    ReleaseTypes = {"Neon", "Mega"},
+    ReleaseRarities = {},
+    ExcludeRarities = {},
 
     -- === AGE PETS ===
-    AgePets = false,
-    AgePetsNames = {},
-    AgePetsTypes = {},  -- "Normal", "Neon", "ALL"
+    AgePets = true,
+    AgePetsNames = {
+        "Abyssinian Cat", "Badger", "Black Rhino",
+        "Black-Footed Ferret", "Blue Whale", "Corgi",
+        "Ginger Cat","Grinmoire", "Mexican Wolf",
+        "Oakee Knight", "Ocelot", "Orangutan", "Orca",
+        "Pangolin", "Parakeet", "Pomeranian", "Ribbon Seal",
+        "River Otter", "Robot", "Sea Turtle", "Starfish", "Storm Condor", "Swordfish", "Toucan", "Zebra"
+    },
+    AgePetsTypes = {"ALL"},
 
     -- === AUTO FUSE ===
     AutoFuse = true,
-    AutoFuseBlacklist = {}, -- Pet names to never include in neon/mega fusion
+    AutoFuseBlacklist = {},
 
     -- === BUY PETS ===
     BuyPets = true,
-    BuyPetName = {"Crystal Egg", "Cracked Egg"},  -- Loops in order, buys all of first pet then moves to next
+    BuyPetName = {"Crystal Egg", "Tealwood Monster", "Endangered Egg"},
 
     -- === BOXES ===
-    BuyBoxes = false,
-    BoxName = {"Box Name"},   -- Boxes to buy when BuyBoxes is true
-    OpenBoxes = {"Box Name"}, -- Box names to open from inventory
+    BuyBoxes = true,
+    BoxName = "2D Box",
+    OpenBoxes = true,
 
     -- === LURE ===
     BaitName = "Bait Name",
 
     -- === AUTO TRADE ===
-    AutoTrade = false,
-    ReceiverUsernames = {},
+    AutoTrade = true,
+ReceiverUsernames = {
+},
     TradeItemList = {
-         pets = {"Dog","Neon Cat"}
-    }, -- Per category: { pets = {"Dog","Neon Cat"}, food = {}, toys = {}, ... } ? use "ALL" in a category to allow that whole category (pets still gated by TradePetType for bare names)
-    TradePetType = {"ALL"},       -- Only applies to pets: "ALL", "Mega", "Neon", "Regular", "Neon_FG", "Regular_FG" ? not used for food/toys/etc.; inline prefixes on pet strings (e.g. "Mega Dog") bypass this
+        pets = {"Crystal Egg"}
+    },
+    TradePetType = {"ALL"},
 
     -- === CASH TRANSFER ===
     CashTransfer = false,
-    TransferMethods = {"mannequin"},  -- Current Methods: "mannequin"
+    TransferMethods = {"mannequin"},
     TransferAccount = "",
 
     -- === DISCORD WEBHOOK ===
     WebhookEnabled = true,
     WebhookURL = "https://discord.com/api/webhooks/1537975041927417956/33uyyT03g6z5GR-_vP_94K6J9K6fvQbFs0Xd1TVDFIW_o_W2xB7KnSWs55NdF3CvyX9g",
-    WebhookPets = {"Silverback Gorilla"},  -- Pet names to send (empty = all)
+    WebhookPets = {
+        "Dragonfruit Fox",
+        "Dango Penguins",
+        "Silverback Gorilla",
+        "Velocirooster",
+        "Sushi Penguin",
+        "Tealwood Monster",
+        "Rainbow Trout"
+    },
 
     ExtraOpti = false
 }
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/voltrex2/VoHub/refs/heads/main/FARM"))()
