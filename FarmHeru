@@ -4,75 +4,104 @@ getgenv().VO_CONFIG = {
     DeviceName = "HERU",
 
     -- === MAIN FARM (choose one mode) ===
-    PotFarm = false,
+    PotFarm = true,
     EggFarm = false,
-    PetFarm = false, -- Third mode: farm pets from PetFarmList in order (natural task-aging)
-    KeepEggFarm = false, -- If true, will keep trying to hatch eggs even when no bucks
-    KeepPetFarm = false, -- If true, will switch back when PetFarmList targets appear
-    EggName = {"Egg Name"},  -- Priority order: first egg tried, then second, etc.
-    PetFarmList = {"River Otter", "Purrowl"}, -- Ordered pet names: age all non-FG of first name, then second, etc.; fallback if none available
+    PetFarm = true,
+    KeepEggFarm = false,
+    KeepPetFarm = true,
+    EggName = {"Egg Name"},
+    PetFarmList = {"Oakee"},
     PrioritizePet = "2D Kitty",
 
-    -- === EVENT ===
-    PrioritizeCraft = "Tealwood Monster Bait",  -- "Rainbow Trout" | "Tealwood Monster Bait" | nil (auto). AutoFish always runs.
-    Craft = false,             -- If false, collect karps only — skip purchases (Tealwood bait / Rainbow Trout)
-    AutoSellFish = true,     -- Sell all karps each pass; disables tealwood/rainbow purchases
-    BuyIrishSetter = false,
-    AutoSkydive = false,      -- [RENDERS MAIN MAP] Complete Skydive Minigame
-    AutoStormSkydive = false, -- [DOESNT RENDER MAIN MAP] Complete storm challenge + buy all Storm Condors
-
     -- === PET PEN ===
-    PetPen = false,
-    CustomPenEggs = {"Egg Name"},
-    CustomPenPets = {},
-    PrioritizePetPenTypes = {},  -- "Egg", "Normal", "Neon" (empty = all)
+    PetPen = true,
+    CustomPenEggs = {"Endangered Egg", "Pet Egg", "Cracked Egg", "Starter Egg"},
+    CustomPenPets = {
+        "Abyssinian Cat", "Badger", "Black Rhino",
+        "Black-Footed Ferret", "Blue Whale", "Corgi",
+        "Ginger Cat","Grinmoire", "Mexican Wolf",
+        "Oakee Knight", "Ocelot", "Orangutan", "Orca",
+        "Pangolin", "Parakeet", "Pomeranian", "Ribbon Seal",
+        "River Otter", "Robot", "Sea Turtle", "Starfish", "Storm Condor", "Swordfish", "Toucan", "Zebra", "Oakee"
+    },
+    PrioritizePetPenTypes = {"Egg"},
 
     -- === PET RELEASER ===
     PetReleaser = true,
-    ReleasePets = {"Rubber Ducky", "Oakee Knight", "Oakee"},       -- Whitelist: names to release (empty = all)
-    ExcludeReleasePets = {}, -- Blacklist: base names or prefixed like ReleasePets ("Neon Dog", "Normal Cat", "Mega FG X")
-    ReleaseTypes = {"Normal"},      -- "Mega", "Neon", "Normal" (empty = all)
-    ReleaseRarities = {},   -- If ReleasePets non-empty: only used for pets NOT named in ReleasePets. If ReleasePets empty: filters all candidates.
-    ExcludeRarities = {},   -- Blacklist rarities (pets on ReleasePets by name bypass this)
+    ReleasePets = {},
+    ExcludeReleasePets = {
+        "Frostbite Bear",
+        "Dragonfruit Fox",
+        "Dango Penguins",
+        "Silverback Gorilla",
+        "Sushi Penguin",
+        "Velocirooster",
+        "2D Kitty",
+        "Rainbow Trout",
+        "Tealwood Monster",
+        "Oakee Wizard", 
+        "General Sheepdog"
+    },
+    ReleaseTypes = {"Neon", "Mega"},
+    ReleaseRarities = {},
+    ExcludeRarities = {},
 
     -- === AGE PETS ===
     AgePets = true,
-    AgePetsNames = {"Purrowl", "River Otter", "Tealwood Monster", "Oakee Wizard"},
-    AgePetsTypes = {"ALL"},  -- "Normal", "Neon", "ALL"
+    AgePetsNames = {
+        "Abyssinian Cat", "Badger", "Black Rhino",
+        "Black-Footed Ferret", "Blue Whale", "Corgi",
+        "Ginger Cat","Grinmoire", "Mexican Wolf",
+        "Oakee Knight", "Ocelot", "Orangutan", "Orca",
+        "Pangolin", "Parakeet", "Pomeranian", "Ribbon Seal",
+        "River Otter", "Robot", "Sea Turtle", "Starfish", "Storm Condor", "Swordfish", "Toucan", "Zebra"
+    },
+    AgePetsTypes = {"ALL"},
 
     -- === AUTO FUSE ===
     AutoFuse = true,
+    AutoFuseBlacklist = {},
 
     -- === BUY PETS ===
     BuyPets = true,
-    BuyPetName = {"Crystal Egg"},  -- Loops in order, buys all of first pet then moves to next
+    BuyPetName = {"Crystal Egg", "Tealwood Monster", "Endangered Egg"},
 
     -- === BOXES ===
     BuyBoxes = true,
-    BoxName = "Oakee Box",   -- Name of the box to buy/open
+    BoxName = "2D Box",
     OpenBoxes = true,
 
     -- === LURE ===
     BaitName = "Bait Name",
 
     -- === AUTO TRADE ===
-    AutoTrade = false,
-    ReceiverUsernames = {"HunterGoPixelr110616", "XzQueenppChasepzX124", "FallenzSSnarefSEcho1", "OrbitOhSt0rmye198918", "UltraQBVoidt40", "Lun42CoolCrew", "M3chaz5Snip3ra1310", "WraithlACircuitd1207", "Ghostc9Primalk", "T0xicggLi0n5103036", "WolfpTLionP117763", "PixelH3Miraget3Fox14", "LavaURByteF1545", "R0cketnIScythe155", "F0x1RFlickqRGalaxy13", "XZ_Core61MechaA1Blad", "DustiMArrowW1852", "Turb061Ech0z134316", "JellyT9Maxf47", "R0ck3tOWMirag3R12155", "MysticENZ3roW25"},
+    AutoTrade = true,
+ReceiverUsernames = {
+},
     TradeItemList = {
-         pets = {"Dog","Neon Cat"}
-    }, -- Per category: { pets = {"Dog","Neon Cat"}, food = {}, toys = {}, ... } — use "ALL" in a category to allow that whole category (pets still gated by TradePetType for bare names)
-    TradePetType = {"ALL"},       -- Only applies to pets: "ALL", "Mega", "Neon", "Regular", "Neon_FG", "Regular_FG" — not used for food/toys/etc.; inline prefixes on pet strings (e.g. "Mega Dog") bypass this
+        pets = {"Crystal Egg"}
+    },
+    TradePetType = {"ALL"},
 
     -- === CASH TRANSFER ===
     CashTransfer = false,
-    TransferMethods = {"mannequin"},  -- Current Methods: "mannequin"
+    TransferMethods = {"mannequin"},
     TransferAccount = "",
 
     -- === DISCORD WEBHOOK ===
-    WebhookEnabled = false,
-    WebhookURL = "",
-    WebhookPets = {},  -- Pet names to send (empty = all)
+    WebhookEnabled = true,
+    WebhookURL = "https://discord.com/api/webhooks/1537975041927417956/33uyyT03g6z5GR-_vP_94K6J9K6fvQbFs0Xd1TVDFIW_o_W2xB7KnSWs55NdF3CvyX9g",
+    WebhookPets = {
+        "Dragonfruit Fox",
+        "Dango Penguins",
+        "Silverback Gorilla",
+        "Velocirooster",
+        "Sushi Penguin",
+        "Tealwood Monster",
+        "Rainbow Trout"
+    },
 
     ExtraOpti = false
 }
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/voltrex2/VoHub/refs/heads/main/FARM"))()
