@@ -18,11 +18,11 @@ getgenv().VO_CONFIG = {
     CustomPenEggs = {"Endangered Egg", "Pet Egg", "Cracked Egg", "Starter Egg"},
     CustomPenPets = {
         "Abyssinian Cat", "Badger", "Black Rhino",
-        "Black-Footed Ferret", "Blue Whale", "Corgi",
-        "Ginger Cat","Grinmoire", "Mexican Wolf",
+        "Black-Footed Ferret", "Corgi",
+        "Ginger Cat", "Grinmoire", "Mexican Wolf",
         "Oakee Knight", "Ocelot", "Orangutan", "Orca",
         "Pangolin", "Parakeet", "Pomeranian", "Ribbon Seal",
-        "River Otter", "Robot", "Sea Turtle", "Starfish", "Storm Condor", "Swordfish", "Toucan", "Zebra", "Oakee"
+        "River Otter", "Robot", "Starfish", "Storm Condor", "Swordfish", "Toucan", "Zebra", "Oakee"
     },
     PrioritizePetPenTypes = {"Egg"},
 
@@ -50,11 +50,11 @@ getgenv().VO_CONFIG = {
     AgePets = true,
     AgePetsNames = {
         "Abyssinian Cat", "Badger", "Black Rhino",
-        "Black-Footed Ferret", "Blue Whale", "Corgi",
-        "Ginger Cat","Grinmoire", "Mexican Wolf",
+        "Black-Footed Ferret", "Corgi",
+        "Ginger Cat", "Grinmoire", "Mexican Wolf",
         "Oakee Knight", "Ocelot", "Orangutan", "Orca",
         "Pangolin", "Parakeet", "Pomeranian", "Ribbon Seal",
-        "River Otter", "Robot", "Sea Turtle", "Starfish", "Storm Condor", "Swordfish", "Toucan", "Zebra"
+        "River Otter", "Robot", "Starfish", "Storm Condor", "Swordfish", "Toucan", "Zebra"
     },
     AgePetsTypes = {"ALL"},
 
