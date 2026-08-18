@@ -10,12 +10,12 @@ getgenv().VO_CONFIG = {
     KeepEggFarm = false,
     KeepPetFarm = true,
     EggName = {"Egg Name"},
-    PetFarmList = {"Oakee", "Black Tiger", "Kakapo", "Mexican Wolf", "Black Rhino", "Pangolin", "Black-Footed Ferret"},
+    PetFarmList = {"Oakee", "Black Tiger", "Kakapo", "Mexican Wolf", "Black Rhino", "Pangolin", "Black-Footed Ferret", "Abyssinian Cat", "Ocelot", "Orangutan", "Parakeet", "Zebra", "Badger", "Corgi", "Ginger Cat", "Gold Mahi Mahi", "Grinmoire", "Orca", "Pomeranian", "Ribbon Seal", "Robot", "Starfish", "Swordfish", "Toucan"},
     PrioritizePet = "2D Kitty",
 
     -- === PET PEN ===
     PetPen = true,
-    CustomPenEggs = {"Endangered Egg", "Pet Egg", "Cracked Egg", "Starter Egg"},
+    CustomPenEggs = {"Crystal Egg", "Endangered Egg", "Pet Egg", "Cracked Egg", "Starter Egg"},
     CustomPenPets = {
         "Abyssinian Cat", "Badger", "Black Rhino",
         "Black-Footed Ferret", "Corgi",
@@ -40,7 +40,8 @@ getgenv().VO_CONFIG = {
         "Rainbow Trout",
         "Tealwood Monster",
         "Oakee Wizard", 
-        "General Sheepdog"
+        "General Sheepdog",
+        "Chihuahua"
     },
     ReleaseTypes = {"Neon", "Mega"},
     ReleaseRarities = {},
@@ -98,6 +99,7 @@ ReceiverUsernames = {
         "Velocirooster",
         "Sushi Penguin",
         "Tealwood Monster",
+        "Emberlight",
         "Rainbow Trout"
     },
 
