@@ -2,7 +2,7 @@ getgenv().ATConfig = {
     -- ## General
     HubKey = "x1zfV_cBS_i4VWvveWTRl2XRNvmXwd5QL2Euu1LNQak",
     MainAccUsername = {"JackJackson199724", "Ethanreal199623", "Williamid200296", "JamesBrown200371", "LukeWilliams200545", "Miaofficial7537", "WilliamGonzalez20014", "Ellalive9342", "Owenlive1183", "Ezraid200336", "EmmaWhite8710", "Ava_Smith7530", "Noah_Jackson200756", "JamesGarcia2472", "AidenMartinez199623"},
-    PetsToTrade = {"Crystal Egg", "Dango Penguins", "Dragonfruit Fox", "Emberlight", "Silverback Gorilla", "Chihuahua", "2D Doggy", "2D Kitty", "Admin Abuse Egg"},
+    PetsToTrade = {"Crystal Egg", "Dango Penguins", "Dragonfruit Fox", "Emberlight", "Silverback Gorilla", "Chihuahua", "2D Doggy", "2D Kitty", "Admin Abuse Egg", "Sushi Penguin", "Purrowl"},
     TradePetType = {"ALL"}, -- Choose any combination: "ALL", "Mega", "Neon", "Regular", "Neon_FG", "Regular_FG"
     ForceReceiver = false, -- If true, any account the script is executed on will be treated as a receiver
     PreventGameLoad = false,
