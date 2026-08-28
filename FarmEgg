@@ -1,109 +1,92 @@
-getgenv().VO_CONFIG = {
-    -- === HUB / AUTH ===
-    HubKey = "x1zfV_cBS_i4VWvveWTRl2XRNvmXwd5QL2Euu1LNQak",
-    DeviceName = "RF",
+getgenv().ATConfig = {
+    -- ## General
+    HubKey = "ZvZqwkGJfurXGoW_tYn88uMEvejJt2d8tF1u5mv2fyQ",
+    MainAccUsername = {"JackJackson199724", "Ethanreal199623", "Williamid200296", "JamesBrown200371", "LukeWilliams200545", "Miaofficial7537", "WilliamGonzalez20014", "Ellalive9342", "Owenlive1183", "Ezraid200336", "EmmaWhite8710", "Ava_Smith7530", "Noah_Jackson200756", "JamesGarcia2472", "AidenMartinez199623", 
+"AsherMoore201541", "ZPerez201236", "OliviaBrown881", "GraysonDavis200610", "OwenLewis200478", "ARodriguez9713", "LiamHernandez2455", "LeviWilson200647", "Jacksonlive9901", "GraysonMiller40", "M3chaz5Snip3ra1310", "HunterGoPixelr110616", "XzQueenppChasepzX124", "Shr3dCcHollowb152493", "R0ck3tOWMirag3R12155", "Lun42CoolCrew", 
+"XzDrift74StealthIzX", "XzPixelatedQ6Silverv", "GlitchbyVenator21496", "Panda01Titan0193569", "ChillNNDustr1412", "ShredJeCore7eTechno1", "Bl0ckQGShad0wI148632", "XzVip3r0OHaz30OFlam3", "Turboz9DeltaT", "SkyhFOblivionyFRaven", "MoonUhTurboV", "Inferno7ZBlade817685", "Xz_ByteWdBlockLdHunt", "XzBlockCvCor39vZapzX"},
+    PetsToTrade = {"Crystal Egg", "Sushi Penguin", "Chihuahua", "Strawberry Tortle", "Kiwi Kiwi", "FG Sea Turtle", "FG Blue Whale", "2D Doggy", "2D Kitty", "Admin Abuse Egg", "Dragonfruit Fox", "FG Dragonfly", "Dango Penguins", "Emberlight"},
+    TradePetType = {"ALL"}, -- Choose any combination: "ALL", "Mega", "Neon", "Regular", "Neon_FG", "Regular_FG"
+    ForceReceiver = false, -- If true, any account the script is executed on will be treated as a receiver
+    PreventGameLoad = false,
+    
+    -- ### Main Pet Buy Feature
+    buyPet = false,
+    PetName = {"Dog", "Cat"}, -- Pet Names to Trade/Buy (priority order: buys all of first pet, then all of second, etc.)
+    Quantity = 0, -- Set to 0 if you want to buy ALL
 
-    -- === MAIN FARM (choose one mode) ===
-    PotFarm = true,
-    EggFarm = false,
-    PetFarm = true,
-    KeepEggFarm = false,
-    KeepPetFarm = true,
-    EggName = {"Egg Name"},
-    PetFarmList = {"Oakee", "Black Tiger", "Kakapo", "Mexican Wolf", "Black Rhino", "Pangolin", "Black-Footed Ferret", "Abyssinian Cat", "Ocelot", "Orangutan", "Parakeet", "Zebra", "Badger", "Corgi", "Ginger Cat", "Gold Mahi Mahi", "Grinmoire", "Orca", "Pomeranian", "Ribbon Seal", "Robot", "Starfish", "Swordfish", "Toucan"},
-    PrioritizePet = "2D Kitty",
+    -- ### Box Features
+    buyBoxes = false,
+    boxName = "Kelp Raider Box",
+    openBoxes = true,
 
-    -- === PET PEN ===
-    PetPen = true,
-    CustomPenEggs = {"Endangered Egg", "Pet Egg", "Cracked Egg", "Starter Egg"},
-    CustomPenPets = {
-        "Abyssinian Cat", "Badger", "Black Rhino",
-        "Black-Footed Ferret", "Corgi",
-        "Ginger Cat", "Grinmoire", "Mexican Wolf",
-        "Oakee Knight", "Ocelot", "Orangutan", "Orca",
-        "Pangolin", "Parakeet", "Pomeranian", "Ribbon Seal",
-        "River Otter", "Robot", "Starfish", "Storm Condor", "Swordfish", "Toucan", "Zebra", "Oakee"
-    },
-    PrioritizePetPenTypes = {"Egg"},
+    -- ### Bait Transfer Features
+    transferBait = false,
+    baitName = "Shiver Cone Bait", -- [ Shiver Cone Bait / Subzero Popsicle Bait ]
 
-    -- === PET RELEASER ===
-    PetReleaser = true,
-    ReleasePets = {},
-    ExcludeReleasePets = {
-        "Frostbite Bear",
-        "Dragonfruit Fox",
-        "Dango Penguins",
-        "Silverback Gorilla",
-        "Sushi Penguin",
-        "Velocirooster",
-        "2D Kitty",
-        "Rainbow Trout",
-        "Tealwood Monster",
-        "Oakee Wizard", 
-        "General Sheepdog",
-        "Chihuahua"
-    },
-    ReleaseTypes = {"Neon", "Mega"},
-    ReleaseRarities = {},
-    ExcludeRarities = {},
+    SmartBuy = false,
 
-    -- === AGE PETS ===
-    AgePets = true,
-    AgePetsNames = {
-        "Abyssinian Cat", "Badger", "Black Rhino",
-        "Black-Footed Ferret", "Corgi",
-        "Ginger Cat", "Grinmoire", "Mexican Wolf",
-        "Oakee Knight", "Ocelot", "Orangutan", "Orca",
-        "Pangolin", "Parakeet", "Pomeranian", "Ribbon Seal",
-        "River Otter", "Robot", "Starfish", "Storm Condor", "Swordfish", "Toucan", "Zebra"
-    },
-    AgePetsTypes = {"ALL"},
+    -- ### Pet Aging Features
+    AgePets = false,
+    AgeNeons = true, -- Enable if u want to make megas
+    useTinyAgePotion = true,
+    PetsToAge = {"Dog"},
+    autoFuse = true, -- Auto Convert to Neon/Mega
 
-    -- === AUTO FUSE ===
-    AutoFuse = true,
-    AutoFuseBlacklist = {},
+    TradeTimeout = false, -- If true, closes game if trade is confirming for more than 150 seconds
 
-    -- === BUY PETS ===
-    BuyPets = true,
-    BuyPetName = {"Crystal Egg", "Tealwood Monster", "Endangered Egg"},
+    -- ### Account Features
+    AccountFeatures = {
+        ["LeaveServer"] = true, -- Leave server when transfer is completed
+        ["LeaveDelay"] = 30, -- Delay in seconds to wait before leaving
 
-    -- === BOXES ===
-    BuyBoxes = true,
-    BoxName = "2D Box",
-    OpenBoxes = true,
-
-    -- === LURE ===
-    BaitName = "Bait Name",
-
-    -- === AUTO TRADE ===
-    AutoTrade = true,
-ReceiverUsernames = {
-},
-    TradeItemList = {
-        pets = {"Crystal Egg"}
-    },
-    TradePetType = {"ALL"},
-
-    -- === CASH TRANSFER ===
-    CashTransfer = false,
-    TransferMethods = {"mannequin"},
-    TransferAccount = "",
-
-    -- === DISCORD WEBHOOK ===
-    WebhookEnabled = true,
-    WebhookURL = "https://discord.com/api/webhooks/1537975041927417956/33uyyT03g6z5GR-_vP_94K6J9K6fvQbFs0Xd1TVDFIW_o_W2xB7KnSWs55NdF3CvyX9g",
-    WebhookPets = {
-        "Dragonfruit Fox",
-        "Dango Penguins",
-        "Silverback Gorilla",
-        "Velocirooster",
-        "Sushi Penguin",
-        "Tealwood Monster",
-        "Emberlight",
-        "Rainbow Trout"
+        ["Selected Tool"] = "FarmSync", -- "FarmSync" or "FarmersV5"
+        ["FarmSync"] = {
+            DisableAccount = false,
+            AutoChange = false,
+            StartFolderId = "",
+            EndFolderId = "",
+            ConfigId = ""
+        },
+        ["FarmersV5"] = {
+            DisableAccount = false,
+            APIKey = "",
+        }
     },
 
-    ExtraOpti = false
+    -- ### Custom Trade List
+    CustomTradeList = {
+        ["pets"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        },
+        ["food"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        },
+        ["pet_accessories"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        },
+        ["toys"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        },
+        ["transport"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        },
+        ["gifts"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        },
+        ["strollers"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        },
+        ["stickers"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        }
+    }
 }
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/voltrex2/VoHub/refs/heads/main/FARM"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/voltrex2/VoHub/refs/heads/main/UTILITY_SCRIPT"))()
