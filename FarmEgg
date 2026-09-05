@@ -23,9 +23,12 @@ getgenv().ATConfig = {
     "Dango Penguins",
     "Emberlight",
     "Neon FG Purrowl",
+    "Mega Purrowl",
     "Mega Blue Whale",
     "Neon FG Huntsman Robin",
+    "Mega Huntsman Robin",
     "Neon FG Three Blind Mice",
+    "Mega Three Blind Mice",
     "Neon FG Little Lamb"
 },
     TradePetType = {"ALL"}, -- Choose any combination: "ALL", "Mega", "Neon", "Regular", "Neon_FG", "Regular_FG"
