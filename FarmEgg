@@ -1,50 +1,92 @@
 getgenv().ATConfig = {
     -- ## General
     HubKey = "ZvZqwkGJfurXGoW_tYn88uMEvejJt2d8tF1u5mv2fyQ",
+
     MainAccUsername = {
-    "EzraMoore29",
-    "Liamreal200743",
-    "CarterWilson200043",
-    "LiamRodriguez200984",
-    "Emmareal8233",
-    "ScarlettThomas200861"
-},
+        "GraceMartinez200095",
+        "JulianJackson201040",
+        "Lucas_Hall84",
+        "WilliamWright201323",
+        "LoganW5503",
+        "LunaBrown200921",
+        "EllaWright201335",
+        "AsherMartinez200745",
+        "Owenreal5438",
+        "MasonBaker201460",
+        "Ethanreal201034",
+        "LeviScott7493",
+        "Lucaslive5756",
+        "OliverH199722",
+        "EmmaWalker4324",
+        "Lukeofficial3155",
+        "Liamid7424",
+        "JaxonMoore28",
+        "Lunaofficial161",
+        "EliScott201083",
+        "CarterJackson200861",
+        "Ezraofficial25",
+        "GBrown199883",
+        "Grayson_Jones200357",
+        "JHernandez1048",
+        "Emmaofficial199772",
+        "ZoeMiller199853",
+        "Zoe_Walker200276",
+        "Ellaofficial3485",
+        "JaxonMartinez201161",
+        "EliLopez199791",
+        "Graysonreal7546",
+        "ZoeClark200595",
+        "LoganBaker201686",
+        "Grace_Miller99",
+        "HTaylor2735",
+        "DYoung200345",
+        "IsaacGreen201515",
+        "LeviMoore200233",
+        "SophiaTaylor99",
+        "OwenScott4802",
+        "Ella_Rodriguez40",
+        "CMoore201565",
+        "Jaxonid2964",
+        "AThomas7121"
+    },
+
     PetsToTrade = {
-    "Admin Abuse Egg",
-    "Crystal Egg",
-    "Alicorn",
-    "Ancient Dragon",
-    "Blue Whale",
-    "Dango Penguins",
-    "Diamond Dragon",
-    "Diamond Griffin",
-    "Diamond Mahi Mahi",
-    "Diamond Unicorn",
-    "Dragonfly",
-    "Dragonfruit Fox",
-    "Fairytale Egg",
-    "Glormy Crab",
-    "Golden Dragon",
-    "Golden Griffin",
-    "Golden Unicorn",
-    "Huntsman Robin",
-    "Kiwi Kiwi",
-    "Purrowl",
-    "Sea Turtle",
-    "Silverback Gorilla",
-    "Strawberry Tortle",
-    "Sushi Penguin",
-    "Three Blind Mice",
-    "Neon FG Little Lamb"
-},
-    TradePetType = {"ALL"}, -- Choose any combination: "ALL", "Mega", "Neon", "Regular", "Neon_FG", "Regular_FG"
-    ForceReceiver = false, -- If true, any account the script is executed on will be treated as a receiver
+        "Admin Abuse Egg",
+        "Crystal Egg",
+        "Alicorn",
+        "Ancient Dragon",
+        "Blue Whale",
+        "Dango Penguins",
+        "Diamond Dragon",
+        "Diamond Griffin",
+        "Diamond Mahi Mahi",
+        "Diamond Unicorn",
+        "Dragonfly",
+        "Dragonfruit Fox",
+        "Fairytale Egg",
+        "Glormy Crab",
+        "Golden Dragon",
+        "Golden Griffin",
+        "Golden Unicorn",
+        "Huntsman Robin",
+        "Kiwi Kiwi",
+        "Purrowl",
+        "Sea Turtle",
+        "Silverback Gorilla",
+        "Strawberry Tortle",
+        "Sushi Penguin",
+        "Three Blind Mice",
+        "Neon FG Little Lamb"
+    },
+
+    TradePetType = {"ALL"},
+    ForceReceiver = false,
     PreventGameLoad = false,
-    
+
     -- ### Main Pet Buy Feature
     buyPet = false,
-    PetName = {"Dog", "Cat"}, -- Pet Names to Trade/Buy (priority order: buys all of first pet, then all of second, etc.)
-    Quantity = 0, -- Set to 0 if you want to buy ALL
+    PetName = {"Dog", "Cat"},
+    Quantity = 0,
 
     -- ### Box Features
     buyBoxes = false,
@@ -53,25 +95,26 @@ getgenv().ATConfig = {
 
     -- ### Bait Transfer Features
     transferBait = false,
-    baitName = "Shiver Cone Bait", -- [ Shiver Cone Bait / Subzero Popsicle Bait ]
+    baitName = "Shiver Cone Bait",
 
     SmartBuy = false,
 
     -- ### Pet Aging Features
     AgePets = false,
-    AgeNeons = true, -- Enable if u want to make megas
+    AgeNeons = true,
     useTinyAgePotion = true,
     PetsToAge = {"Dog"},
-    autoFuse = true, -- Auto Convert to Neon/Mega
+    autoFuse = true,
 
-    TradeTimeout = false, -- If true, closes game if trade is confirming for more than 150 seconds
+    TradeTimeout = false,
 
     -- ### Account Features
     AccountFeatures = {
-        ["LeaveServer"] = true, -- Leave server when transfer is completed
-        ["LeaveDelay"] = 30, -- Delay in seconds to wait before leaving
+        ["LeaveServer"] = true,
+        ["LeaveDelay"] = 30,
 
-        ["Selected Tool"] = "FarmSync", -- "FarmSync" or "FarmersV5"
+        ["Selected Tool"] = "FarmSync",
+
         ["FarmSync"] = {
             DisableAccount = false,
             AutoChange = false,
@@ -79,9 +122,10 @@ getgenv().ATConfig = {
             EndFolderId = "",
             ConfigId = ""
         },
+
         ["FarmersV5"] = {
             DisableAccount = false,
-            APIKey = "",
+            APIKey = ""
         }
     },
 
@@ -91,34 +135,46 @@ getgenv().ATConfig = {
             ["Trade"] = {},
             ["Ignore"] = {}
         },
+
         ["food"] = {
             ["Trade"] = {},
             ["Ignore"] = {}
         },
+
         ["pet_accessories"] = {
             ["Trade"] = {},
             ["Ignore"] = {}
         },
+
         ["toys"] = {
             ["Trade"] = {},
             ["Ignore"] = {}
         },
+
         ["transport"] = {
             ["Trade"] = {},
             ["Ignore"] = {}
         },
+
         ["gifts"] = {
             ["Trade"] = {},
             ["Ignore"] = {}
         },
+
         ["strollers"] = {
             ["Trade"] = {},
             ["Ignore"] = {}
         },
+
         ["stickers"] = {
             ["Trade"] = {},
             ["Ignore"] = {}
         }
     }
 }
-loadstring(game:HttpGet("https://raw.githubusercontent.com/voltrex2/VoHub/refs/heads/main/UTILITY_SCRIPT"))()
+
+loadstring(
+    game:HttpGet(
+        "https://raw.githubusercontent.com/voltrex2/VoHub/refs/heads/main/UTILITY_SCRIPT"
+    )
+)()
