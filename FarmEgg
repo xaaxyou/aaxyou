@@ -51,6 +51,7 @@ getgenv().ATConfig = {
     },
 
     PetsToTrade = {
+        "Fairytale Egg",
         "Admin Abuse Egg",
         "Crystal Egg",
         "Alicorn",
