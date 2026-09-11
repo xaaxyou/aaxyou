@@ -1,90 +1,171 @@
-getgenv().ATConfig = {
-    -- ## General
-    HubKey = "x1zfV_cBS_i4VWvveWTRl2XRNvmXwd5QL2Euu1LNQak",
-    MainAccUsername = {},
-    PetsToTrade = {"Crystal Egg", "Sushi Penguin", "Chihuahua", "Strawberry Tortle", "Kiwi Kiwi", "FG Sea Turtle", "FG Blue Whale", "2D Doggy", "2D Kitty", "Admin Abuse Egg", "Dragonfruit Fox", "FG Dragonfly", "Dango Penguins", "Emberlight"},
-    TradePetType = {"ALL"}, -- Choose any combination: "ALL", "Mega", "Neon", "Regular", "Neon_FG", "Regular_FG"
-    ForceReceiver = false, -- If true, any account the script is executed on will be treated as a receiver
-    PreventGameLoad = false,
-    
-    -- ### Main Pet Buy Feature
-    buyPet = false,
-    PetName = {"Dog", "Cat"}, -- Pet Names to Trade/Buy (priority order: buys all of first pet, then all of second, etc.)
-    Quantity = 0, -- Set to 0 if you want to buy ALL
+getgenv().VO_CONFIG = {
+    -- === HUB / AUTH ===
+    HubKey = "ZvZqwkGJfurXGoW_tYn88uMEvejJt2d8tF1u5mv2fyQ",
+    DeviceName = "ARYA",
 
-    -- ### Box Features
-    buyBoxes = false,
-    boxName = "Kelp Raider Box",
-    openBoxes = true,
+    -- === MAIN FARM ===
+    PotFarm = true,
+    EggFarm = false,
+    PetFarm = true,
+    KeepEggFarm = false,
+    KeepPetFarm = true,
+    EggName = {"Egg Name"},
 
-    -- ### Bait Transfer Features
-    transferBait = false,
-    baitName = "Shiver Cone Bait", -- [ Shiver Cone Bait / Subzero Popsicle Bait ]
+    PetFarmList = {
+        -- Common Pet
+		"Pinkypillar",
+		"Ms. Muffet",
+		"California Condor",
+		"Galapagos Sea Lion",
 
-    SmartBuy = false,
+        -- Uncommon Pet
+		"Black Tiger",
+		"Kakapo",
+		"Princess Mare",
+		"Budgie Witch",
 
-    -- ### Pet Aging Features
-    AgePets = false,
-    AgeNeons = true, -- Enable if u want to make megas
-    useTinyAgePotion = true,
-    PetsToAge = {"Dog"},
-    autoFuse = true, -- Auto Convert to Neon/Mega
+        -- Rare Pet
+		"Mexican Wolf",
+		"Black Rhino",
+		"Clumpty",
+		"Granny Wolf",
 
-    TradeTimeout = false, -- If true, closes game if trade is confirming for more than 150 seconds
-
-    -- ### Account Features
-    AccountFeatures = {
-        ["LeaveServer"] = true, -- Leave server when transfer is completed
-        ["LeaveDelay"] = 30, -- Delay in seconds to wait before leaving
-
-        ["Selected Tool"] = "FarmSync", -- "FarmSync" or "FarmersV5"
-        ["FarmSync"] = {
-            DisableAccount = false,
-            AutoChange = false,
-            StartFolderId = "",
-            EndFolderId = "",
-            ConfigId = ""
-        },
-        ["FarmersV5"] = {
-            DisableAccount = false,
-            APIKey = "",
-        }
+        -- Ultra-Rare Pet
+        "Black-Footed Ferret",
+		"Crimson Cape",
+		"Little Lamb",
+        "Pangolin",		
     },
 
-    -- ### Custom Trade List
-    CustomTradeList = {
-        ["pets"] = {
-            ["Trade"] = {},
-            ["Ignore"] = {}
-        },
-        ["food"] = {
-            ["Trade"] = {},
-            ["Ignore"] = {}
-        },
-        ["pet_accessories"] = {
-            ["Trade"] = {},
-            ["Ignore"] = {}
-        },
-        ["toys"] = {
-            ["Trade"] = {},
-            ["Ignore"] = {}
-        },
-        ["transport"] = {
-            ["Trade"] = {},
-            ["Ignore"] = {}
-        },
-        ["gifts"] = {
-            ["Trade"] = {},
-            ["Ignore"] = {}
-        },
-        ["strollers"] = {
-            ["Trade"] = {},
-            ["Ignore"] = {}
-        },
-        ["stickers"] = {
-            ["Trade"] = {},
-            ["Ignore"] = {}
-        }
-    }
+    PrioritizePet = "2D Kitty",
+
+    -- === PET PEN ===
+    PetPen = true,
+    CustomPenEggs = {"Fairytale Egg"},
+
+    CustomPenPets = {
+        -- Common Pet
+		"Pinkypillar",
+		"Ms. Muffet",
+		"California Condor",
+		"Galapagos Sea Lion",
+
+        -- Uncommon Pet
+		"Black Tiger",
+		"Kakapo",
+		"Princess Mare",
+		"Budgie Witch",
+
+        -- Rare Pet
+		"Mexican Wolf",
+		"Black Rhino",
+		"Clumpty",
+		"Granny Wolf",
+
+        -- Ultra-Rare Pet
+        "Black-Footed Ferret",
+		"Crimson Cape",
+		"Little Lamb",
+        "Pangolin",		
+    },
+
+    PrioritizePetPenTypes = {"Normal"},
+
+    -- === PET RELEASER ===
+    PetReleaser = true,
+
+    ReleasePets = {},
+    ExcludeReleasePets = {
+        "Dango Penguins",
+        "Dragonfruit Fox",
+        "Silverback Gorilla",
+		"Blue Whale",
+		"Sea Turtle",
+		"Alicorn",
+		"Dragonfly",
+		"Ancient Dragon",
+		"Kiwi Kiwi",
+		"2D Kitty",
+		"2D Doggy",
+		"Huntsman Robin",
+		"Three Blind Mice",		
+        "Chihuahua"
+    },
+
+    ReleaseTypes = {"Neon", "Mega"},
+    ReleaseRarities = {},
+    ExcludeRarities = {"Legendary"},
+
+    -- === AGE PETS ===
+    AgePets = true,
+
+    AgePetsNames = {
+        -- Common Pet
+		"Pinkypillar",
+		"Ms. Muffet",
+		"California Condor",
+		"Galapagos Sea Lion",
+
+        -- Uncommon Pet
+		"Black Tiger",
+		"Kakapo",
+		"Princess Mare",
+		"Budgie Witch",
+
+        -- Rare Pet
+		"Mexican Wolf",
+		"Black Rhino",
+		"Clumpty",
+		"Granny Wolf",
+
+        -- Ultra-Rare Pet
+        "Black-Footed Ferret",
+		"Crimson Cape",
+		"Little Lamb",
+        "Pangolin",		
+    },
+
+    AgePetsTypes = {"Normal"},
+
+    -- === AUTO FUSE ===
+    AutoFuse = true,
+    AutoFuseBlacklist = {},
+
+    -- === BUY PETS ===
+    BuyPets = true,
+    BuyPetName = {"Fairytale Egg", "Crystal Egg"},
+
+    -- === BOXES ===
+    BuyBoxes = false,
+    BoxName = "",
+    OpenBoxes = false,
+
+    -- === LURE ===
+    BaitName = "",
+
+    -- === AUTO TRADE ===
+    AutoTrade = false,
+	ReceiverUsernames = {},
+
+    TradeItemList = {
+        pets = {"Crystal Egg"}
+    },
+
+    TradePetType = {},
+
+    -- === CASH TRANSFER ===
+    CashTransfer = false,
+    TransferMethods = {},
+    TransferAccount = "",
+
+    -- === DISCORD WEBHOOK ===
+    WebhookEnabled = false,
+    WebhookURL = "",
+    WebhookPets = {},
+
+    ExtraOpti = false
 }
-loadstring(game:HttpGet("https://raw.githubusercontent.com/voltrex2/VoHub/refs/heads/main/UTILITY_SCRIPT"))()
+
+loadstring(game:HttpGet(
+    "https://raw.githubusercontent.com/voltrex2/VoHub/refs/heads/main/FARM"
+))()
