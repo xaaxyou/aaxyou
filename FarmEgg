@@ -1,6 +1,6 @@
 getgenv().ATConfig = {
     -- ## General
-    HubKey = "ZvZqwkGJfurXGoW_tYn88uMEvejJt2d8tF1u5mv2fyQ",
+    HubKey = "cN971JQ7GqrYR_pdP3yP-QGgsWhTISQh0Ns0XK9Rr5c",
 
     MainAccUsername = {
         "M3chaz5Snip3ra1310",
