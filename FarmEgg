@@ -80,7 +80,7 @@ getgenv().ATConfig = {
 
     -- ### Account Features
     AccountFeatures = {
-        ["LeaveServer"] = true,
+        ["LeaveServer"] = false,
         ["LeaveDelay"] = 30,
 
         ["Selected Tool"] = "FarmSync",
