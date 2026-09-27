@@ -1,25 +1,18 @@
 getgenv().ATConfig = {
-    -- ## General
+    -- General
     HubKey = "cN971JQ7GqrYR_pdP3yP-QGgsWhTISQh0Ns0XK9Rr5c",
 
     MainAccUsername = {
-        "M3chaz5Snip3ra1310",
-		"XzRiftuGSparklyJzX40",
-		"Turboz9DeltaT",
-        "XzVip3r0OHaz30OFlam3",
-        "ChillNNDustr1412",
-        "ShredJeCore7eTechno1",
-        "Bl0ckQGShad0wI148632",
-        "HunterGoPixelr110616",
-        "XzQueenppChasepzX124",
-        "Shr3dCcHollowb152493",
-        "R0ck3tOWMirag3R12155",
-        "Lun42CoolCrew",
-		"Inferno7ZBlade817685",
-        "XzDrift74StealthIzX",
-        "XzPixelatedQ6Silverv",
-        "GlitchbyVenator21496",
-        "Panda01Titan0193569"
+        "rine33460",
+        "dibo666837",
+        "deni89820",
+        "toni333924",
+        "dibo66662",
+        "deni89193",
+        "dibo66685",
+        "toni333837",
+        "cece77834",
+        "cece77044",
     },
 
     PetsToTrade = {
@@ -47,30 +40,30 @@ getgenv().ATConfig = {
         "Strawberry Tortle",
         "Sushi Penguin",
         "Three Blind Mice",
-        "Neon FG Little Lamb"
+        "Little Lamb",
     },
 
     TradePetType = {"ALL"},
     ForceReceiver = false,
     PreventGameLoad = false,
 
-    -- ### Main Pet Buy Feature
+    -- Main Pet Buy Feature
     buyPet = false,
     PetName = {"Dog", "Cat"},
     Quantity = 0,
 
-    -- ### Box Features
+    -- Box Features
     buyBoxes = false,
     boxName = "Kelp Raider Box",
     openBoxes = true,
 
-    -- ### Bait Transfer Features
+    -- Bait Transfer Features
     transferBait = false,
     baitName = "Shiver Cone Bait",
 
     SmartBuy = false,
 
-    -- ### Pet Aging Features
+    -- Pet Aging Features
     AgePets = false,
     AgeNeons = true,
     useTinyAgePotion = true,
@@ -79,11 +72,10 @@ getgenv().ATConfig = {
 
     TradeTimeout = false,
 
-    -- ### Account Features
+    -- Account Features
     AccountFeatures = {
-        ["LeaveServer"] = false,
+        ["LeaveServer"] = true,
         ["LeaveDelay"] = 30,
-
         ["Selected Tool"] = "FarmSync",
 
         ["FarmSync"] = {
@@ -91,61 +83,59 @@ getgenv().ATConfig = {
             AutoChange = false,
             StartFolderId = "",
             EndFolderId = "",
-            ConfigId = ""
+            ConfigId = "",
         },
 
         ["FarmersV5"] = {
             DisableAccount = false,
-            APIKey = ""
-        }
+            APIKey = "",
+        },
     },
 
-    -- ### Custom Trade List
+    -- Custom Trade List
     CustomTradeList = {
         ["pets"] = {
             ["Trade"] = {},
-            ["Ignore"] = {}
+            ["Ignore"] = {},
         },
 
         ["food"] = {
             ["Trade"] = {},
-            ["Ignore"] = {}
+            ["Ignore"] = {},
         },
 
         ["pet_accessories"] = {
             ["Trade"] = {},
-            ["Ignore"] = {}
+            ["Ignore"] = {},
         },
 
         ["toys"] = {
             ["Trade"] = {},
-            ["Ignore"] = {}
+            ["Ignore"] = {},
         },
 
         ["transport"] = {
             ["Trade"] = {},
-            ["Ignore"] = {}
+            ["Ignore"] = {},
         },
 
         ["gifts"] = {
             ["Trade"] = {},
-            ["Ignore"] = {}
+            ["Ignore"] = {},
         },
 
         ["strollers"] = {
             ["Trade"] = {},
-            ["Ignore"] = {}
+            ["Ignore"] = {},
         },
 
         ["stickers"] = {
             ["Trade"] = {},
-            ["Ignore"] = {}
-        }
-    }
+            ["Ignore"] = {},
+        },
+    },
 }
 
-loadstring(
-    game:HttpGet(
-        "https://raw.githubusercontent.com/voltrex2/VoHub/refs/heads/main/UTILITY_SCRIPT"
-    )
-)()
+loadstring(game:HttpGet(
+    "https://raw.githubusercontent.com/voltrex2/VoHub/refs/heads/main/UTILITY_SCRIPT"
+))()
