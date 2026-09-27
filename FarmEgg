@@ -40,7 +40,6 @@ getgenv().ATConfig = {
         "Strawberry Tortle",
         "Sushi Penguin",
         "Three Blind Mice",
-        "Neon FG Little Lamb",
     },
 
     TradePetType = {"ALL"},
